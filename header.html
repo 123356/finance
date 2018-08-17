@@ -1,0 +1,68 @@
+<nav class="Inf_nav">
+    <div class="Inf_nav_content">
+        <ul>
+            <li>
+                <span>首页</span>
+                <span>|</span>
+                <span>学院</span>
+            </li>
+            <li>
+                <img src="image/account.png" alt="">
+                <a href="sign.html"><span class="Inf_sign">注册 </span></a>
+                <span>|</span>
+                <a href="login.html"><span class="Inf_login">登录</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="Inf_title">
+    <div class="Inf_title_content">
+        <ul>
+            <li>
+                <span> <a href="index.html">首页</a></span>
+                <span><a href="information.html">资讯</a></span>
+                <span><a href="stock.html">股票</a></span>
+                <span><a href="fatures.html">期货</a></span>
+                <span><a href="exchange.html">外汇</a></span>
+                <span><a href="Celebrity.html">名人栏</a></span>
+                <span class="Inf_app">讲座</span>
+            </li>
+            <li>
+                <img src="image/ssearch.png" alt="" class="Inf_search">
+                <input type="text" value="请输入关键字">
+                <button>搜索</button>
+            </li>
+        </ul>
+    </div>
+    <div class="inf_hidden">
+        <div class="inf_hidden_content">
+            <span>地产</span>
+            <span>文玩</span>
+            <span>论坛</span>
+            <span>定存</span>
+            <span>定投</span>
+            <span>基金</span>
+            <span>融资</span>
+            <span>发布</span>
+            <span>论坛</span>
+            <span>银行</span>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $(".Inf_title_content span a").each(function(){
+            $this = $(this);
+            if($this[0].href==String(window.location)){
+                $(".Inf_title_content span a").removeClass("active");
+                $this.addClass("active");
+            }
+        });
+    });
+    $(".Inf_title_content ul").hover(function () {
+        $(".inf_hidden").stop(true,false).slideDown()
+    })
+    $(".inf_hidden").mouseleave(function () {
+        $(".inf_hidden").stop(true,false).slideUp()
+    })
+</script>

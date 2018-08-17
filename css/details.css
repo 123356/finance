@@ -1,0 +1,228 @@
+.D_container_sum{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.D_container{
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+}
+.D_container_left{
+    width: 291px;
+    display: block;
+    float: left;
+    margin-right: 9px;
+}
+.D_container_right,.D_container_right1{
+    width: 900px;
+    height: 1018px;
+    display: block;
+    float: left;
+    background-color: white;
+    padding: 0 46px 0 30px;
+}
+.D_container_right1{
+    height: 2066px;
+    padding: 0;
+}
+.D_container_left dl>dt{
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+.D_container_left dl>dt>img{
+    width: 190px;
+    height: 190px;
+    display: block;
+    border-radius: 50%;
+    margin: 20px auto 0;
+}
+.D_container_left dl>dd{
+    width: 100%;
+    height: 615px;
+    background-color: white;
+}
+.dd_title{
+    width: 100%;
+    height: 295px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+.dd_title p:nth-of-type(1){
+    width:100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 16px 0;
+    display: block;
+}
+.dd_title p:nth-of-type(2){
+    width: 243px;
+    margin:0 auto;
+    font-size: 14px;
+    display: block;
+}
+.dd_title input{
+    border: 1px solid #A0DCF8;
+    width: 141px ;
+    height: 48px;
+    border-radius: 10px;
+    color: #AEDDF8;
+    font-size: 20px;
+    text-align: center;
+    line-height: 48px;
+    margin: 19px auto 0;
+    display: block;
+}
+.dd_title_up{
+    width: 100%;
+    height: 105px;
+    border-bottom: 1px solid #ccc;
+}
+.dd_title_up p{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+}
+.dd_title_up p>span{
+   color:#999999;
+    display: block;
+    margin-top: 18px;
+}
+.dd_title_up p>span:nth-of-type(1){
+    font-size: 24px;
+}
+.dd_title_up p>span:nth-of-type(2){
+    font-size: 18px;
+}
+.dd_title_down{
+    width: 100%;
+    height: 72px;
+    border-bottom: 1px solid #ccc;
+}
+.dd_title_down p{
+    width: 50%;
+    height: 100%;
+    display: block;
+    float: left;
+    color:#B8B8B8;
+    font-size: 20px;
+    text-align: center;
+    line-height: 72px;
+}
+.dd_none1{
+    border-bottom: 0;
+}
+.D_container_right dt,.D_container_right1 dt{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+.D_container_right1 dt{
+    padding-left: 30px;
+}
+.D_container_right dt>img,.D_container_right1 dt>img{
+    width: 32px;
+    height: 32px;
+    display: block;
+    float: left;
+    margin-top: 24px;
+}
+.D_container_right dt>span,.D_container_right1 dt>span{
+    font-size: 22px;
+    color:#90D6F6;
+    font-weight: 500;
+    display: block;
+    float: left;
+}
+.D_container_right dd{
+    width: 248px;
+    height: 278px;
+    float: left;
+    margin:0 40px 36px 0 ;
+    overflow: hidden;
+}
+.D_container_right dd video{
+    width: 100%;
+    height: 228px;
+    background-color: black;
+}
+.D_container_right dd>p{
+    height: 50px;
+    width: 100%;
+    background-color: #EEEEEE;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+}
+.D_container_right dd>p>img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    margin: 10px 3px 0 0;
+}
+.D_container_right dd>p>span{
+    font-size: 14px;
+    width: 196px;
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+.D_container_right dd:nth-of-type(3n){
+    margin-right: 0;
+}
+.D_container_right1 dd{
+    width: 100%;
+    height: 220px;
+    border-bottom: 1px solid #EEEEEE;
+    overflow: hidden;
+    display: block;
+}
+.D_container_right1 dd:nth-of-type(1){
+    height: 195px;
+}
+.D_container_right1 dd>img{
+    width: 337px;
+    height: 175px;
+    display: block;
+    float: left;
+    margin:23px 0 0 30px;
+}
+.D_container_right1 dd:nth-of-type(1)>img{
+    margin-top: 0;
+}
+.D_container_right1 dd>p{
+    width: 495px;
+    height: 100%;
+    margin-left: 15px;
+    display: block;
+    float: left;
+    margin-top: 25px;
+}
+.D_container_right1 dd:nth-of-type(1)>p{
+    margin-top: 5px;
+}
+.D_container_right1 dd>p>span:nth-of-type(1){
+    font-size: 20px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.D_container_right1 dd>p>span:nth-of-type(2){
+    font-size: 12px;
+    color: #B0B0B0;
+    display: block;
+    margin-bottom: 11px;
+}
+.D_container_right1 dd>p>span:nth-of-type(2){
+    font-size: 12px;
+    display: block;
+}

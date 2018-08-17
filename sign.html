@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/information.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="mask">
+    <div class="login">
+        <div class="login_title">
+            <p>注册</p>
+        </div>
+        <div class="sign_content">
+            <form action="">
+                <input type="text" placeholder="请输入手机号">
+                <input type="text" placeholder="请输入密码">
+                <div class="sign_picture">
+                    <input type="text" placeholder="请输入图片验证码" id="input" name="code">
+                    <div id="yzm" onclick="document.getElementById('yzm').innerHTML = yzm();"></div>
+                </div>
+                <div class="sign_picture">
+                    <input type="text" placeholder="请输入手机验证吗"id="input1" >
+                    <div class="sign_code1">获取验证码</div>
+                </div>
+                <button  class="login_content_login">立即注册</button>
+                <a  href="login.html">已有账号？立即登录</a>
+            </form>
+        </div>
+    </div>
+    <div class="sharing">
+        <img src="image/g1.png" alt="">
+    </div>
+    <div class="sharing1">
+        <img src="image/g2.png" alt="">
+    </div>
+</div>
+<header></header>
+<div class="sign_footer">
+    <p>关于我们 | 友情链接 | 合作电话：0755-83990201 | 路演互动热线：4008303630 | 电子邮箱：service@p5w.net</p>
+    <p>经营许可证号：粤B2-20050249号 信息网络传播视听节目许可证号：1903034 粤公网安备 44030402000764号 深圳市市场监督管理局企业主体身份公示深圳市市场监督管理局</p>
+    <p>Copyright©陕西先秦网络科技有限责任公司版权所有</p>
+</div>
+</body>
+<script src="js/jquery3.2.1.min.js"></script>
+<script>
+    $("header").load("header.html")
+    function yzm(){
+        var arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9'];
+        var str = '';
+        for(var i = 0 ; i < 4 ; i ++ )
+            str += ''+arr[Math.floor(Math.random() * arr.length)];
+        return str;
+    }
+</script>
+</html>

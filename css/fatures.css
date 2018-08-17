@@ -1,0 +1,355 @@
+.FContainer{
+    width: 1200px;
+    margin: 5px auto;
+}
+.FContainer_banner{
+    width: 100%;
+    height: 328px;
+    margin: 10px 0;
+}
+.FContainer_banner_left{
+    width: 19.25%;
+    height: 100%;
+    float: left;
+    margin-right: 1%;
+    background-color: white;
+}
+.FContainer_banner_right{
+    width: 79.75%;
+    height: 100%;
+    float: right;
+}
+.express,.section_right_title,.FContent_left_title,.FContent_right_title,.FInstitution_title{
+    width: 100%;
+    height: 32px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.express span,.section_right_title span,.FContent_left_title span,.FContent_right_title span,.FInstitution_title span{
+    height: 32px;
+    border-bottom: 1px solid #1B97F7;
+    line-height: 32px;
+    display: inline-block;
+    margin-left: 11px;
+    font-size: 18px;
+}
+.FContainer_banner_left dl{
+    width: 100%;
+    height: 295px;
+}
+.FContainer_banner_left dl dt{
+    width: 90%;
+    padding: 0 5%;
+    height: 20%;
+    margin-bottom: 5%;
+}
+.FContainer_banner_left dl dt>p:nth-of-type(1){
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.FContainer_banner_left dl dt>p:nth-of-type(2){
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+.FContainer_banner_left dl dt>p:nth-of-type(1)>img,.FContainer_banner_left dl dt>p:nth-of-type(1)>a>img{
+    width: 80%;
+    height: 90%;
+    margin: 5% 0 0 5%;
+    padding: 2px;
+    border: 2px solid #ccc;
+}
+.FContainer_banner_left dl dt>p:nth-of-type(2)>span:nth-of-type(1){
+    color:#7272CA;
+    font-size: 16px;
+    display: block;
+    margin-top: 5%;
+}
+.FContainer_banner_left dl dt>p:nth-of-type(2)>span:nth-of-type(2){
+    font-size: 12px;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   height: 30px;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.FContainer_banner_right ul{
+    width: 100%;
+    height: 33px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.FContainer_banner_right ul li p{
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    background-color: white;
+}
+.FContainer_banner_right ul li p>span{
+    width: 30%;
+    height: 100%;
+    line-height: 33px;
+    color:#DB5C5C;
+    display: block;
+    float: left;
+    margin-left: 1%;
+}
+.FContainer_banner_right ul li p>span:nth-of-type(1){
+    color: #333;
+}
+.FContainer_banner_right section{
+    width: 100%;
+    height: 285px;
+}
+.FContainer_banner_right section dl{
+    width: 676px;
+    height: 100%;
+    float: left;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+.fprev,.fnext{
+    width: 40px;
+    height: 80px;
+    color: #DBDBDB;
+    font-size: 40px;
+    line-height: 80px;
+    font-weight: 800;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 999;
+}
+.fprev{
+    left: 0;
+}
+.fnext{
+    right: 0;
+}
+.fchoose{
+    display: none;
+    height: 95px;
+    width: 100%;
+}
+.fchoose:nth-of-type(1){
+    display: block;
+}
+#fchoose,#fchoose1,#fchoose2,#fchoose3,#fchoose4{
+    width: 100%;
+    height: 95px;
+    border-bottom: 1px solid #ccc;
+}
+.FContainer_banner_right section dl dt{
+    width: 10000px;
+    height: 100%;
+    transition: all 0.5s;
+}
+.FContainer_banner_right section dl dt img{
+    width: 338.5px;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+.section_right{
+    width: 270px;
+    height: 100%;
+    float: right;
+    background-color: white;
+}
+.ftable{
+    height: 254px;
+    width: 100%;
+    border-spacing: 0;
+}
+.ftable_item{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    height: 24px;
+    width: 100%;
+    line-height: 24px;
+    font-size: 12px;
+}
+.ftable_item:nth-of-type(1){
+    border-top: none;
+}
+.ftable_item p,.ftable_item1 p{
+    width: 25%;
+    height: 24px;
+    float: left;
+    text-align: center;
+    color: #ff0036;
+}
+.ftable_item p:nth-of-type(1){
+    color: #333;
+}
+.ftable_item1{
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+.ftable_item1 p{
+    color: #333;
+}
+.FContainer_banner_down{
+    width: 100%;
+    height: 117px;
+    margin: 5px auto;
+    background: url("../image/bla.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.FContent{
+    width: 1200px;
+    height: 457px;
+    margin: 10px auto;
+}
+.FContent_left{
+    width: 698px;
+    height: 457px;
+    background-color: white;
+    float: left;
+}
+.FContent_right{
+    width: 490px;
+    height: 100%;
+    float: left;
+    margin-left: 12px;
+    background-color: white;
+}
+.FContent_leftL{
+    width: 100%;
+    height: 45%;
+    overflow: hidden;
+}
+.Fnone{
+    margin-left: 0;
+    margin-right: 1%;
+}
+.FContent_leftL img{
+    width: 32%;
+    height: 80%;
+    margin: 3%;
+    border-radius: 10px;
+    float: left;
+    display: block;
+}
+.FContent_leftR{
+    width: 60%;
+    float: left;
+    height: 80%;
+}
+.FContent_leftR p:nth-of-type(1){
+    width: 100%;
+    height: 45%;
+    border-bottom: 1px solid #ccc;
+    margin-top: 5%;
+}
+.FContent_leftR p:nth-of-type(2){
+    width: 100%;
+    height: 49%;
+}
+.FContent_leftR p span:nth-of-type(1){
+    width: 100%;
+    font-size: 18px;
+    display: block;
+    text-indent: 14px;
+    margin: 5px 0;
+}
+.FContent_leftR p span:nth-of-type(2){
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #ccc;
+    display: block;
+    text-indent: 28px;
+}
+.FContent_right_content{
+    height: 187px;
+    width: 100%;
+}
+.FContent_right table{
+    height: 230px;
+    width: 100%;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.FContent_right table tr td{
+    border-bottom: 1px dashed #ccc;
+}
+.FContent_right table tr td:nth-of-type(2),.FContent_right table tr td:nth-of-type(3),.FContent_right table tr td:nth-of-type(4){
+    color: #ff0036;
+}
+.FContent_right table tr:nth-of-type(1)>td{
+    color: #333;
+}
+.FContent_right_content_title{
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+}
+.FContent_right_content_title p{
+    width: 33.33%;
+    float: left;
+    color: #ff0036;
+    text-align: center;
+    line-height: 40px;
+}
+.FContent_right_content_title p:nth-of-type(1){
+    color: #333;
+}
+.FContent_right_content_title p:nth-of-type(2)>span>img{
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+}
+#ththumb,#ththumb1,#ththumb2,#ththumb3{
+    width: 60%;
+    margin: 0 auto;
+    height: 147px;
+}
+.FInstitution{
+    width: 1200px;
+    margin: 0 auto;
+    height: 205px;
+    background-color: white;
+}
+.FInstitution ul{
+    width: 100%;
+    height: 175px;
+    margin: 0 auto;
+    padding: 29px 59px 0 52px;
+}
+.FInstitution ul li{
+    width: 149px;
+    height: 110px;
+    display: block;
+    float: left;
+    margin-right: 39px;
+}
+.FInstitution ul li:nth-last-of-type(1){
+    margin-right: 0;
+}
+.FInstitution ul li img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #C4C4C4;
+    display: block;
+}
+.scrollbox{width:100%; position: relative;margin-bottom: 11px;}
+#scrollDiv li{transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;}
+#scrollDiv{width:100%;height:33px; overflow:hidden; display: block;}
+.scroltit{ position: absolute; right:0px; top:0px;width:18px;height: 33px;}
+.scroltit small{float:right; font-size:12px;width:18px;height:16px; line-height:16px; text-align: center;color: #fff;font-family: "宋体"; transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;}
+.scroltit small img{margin-top: 3px;
+    width: 100%;
+    height: 100%;}
