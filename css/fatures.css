@@ -26,7 +26,7 @@
 }
 .express span,.section_right_title span,.FContent_left_title span,.FContent_right_title span,.FInstitution_title span{
     height: 32px;
-    border-bottom: 1px solid #1B97F7;
+    border-bottom: 2px solid #1B97F7;
     line-height: 32px;
     display: inline-block;
     margin-left: 11px;
@@ -135,7 +135,7 @@
 }
 .fchoose{
     display: none;
-    height: 95px;
+    height: 100px;
     width: 100%;
 }
 .fchoose:nth-of-type(1){
@@ -143,8 +143,7 @@
 }
 #fchoose,#fchoose1,#fchoose2,#fchoose3,#fchoose4{
     width: 100%;
-    height: 95px;
-    border-bottom: 1px solid #ccc;
+    height: 100px;
 }
 .FContainer_banner_right section dl dt{
     width: 10000px;
@@ -170,15 +169,16 @@
     border-spacing: 0;
 }
 .ftable_item{
-    border-top: 1px solid #ccc;
     text-align: center;
-    height: 24px;
     width: 100%;
+    min-height: 24px;
     line-height: 24px;
     font-size: 12px;
+    border-bottom: 1px solid #ccc;
 }
-.ftable_item:nth-of-type(1){
-    border-top: none;
+.ftable_up{
+    display: block;
+    height: 24px;
 }
 .ftable_item p,.ftable_item1 p{
     width: 25%;
@@ -196,6 +196,7 @@
     text-align: center;
     width: 100%;
     font-size: 14px;
+    border-bottom: 1px solid #ccc;
 }
 .ftable_item1 p{
     color: #333;
@@ -238,7 +239,6 @@
     width: 32%;
     height: 80%;
     margin: 3%;
-    border-radius: 10px;
     float: left;
     display: block;
 }
@@ -270,7 +270,6 @@
     font-size: 14px;
     color: #ccc;
     display: block;
-    text-indent: 28px;
 }
 .FContent_right_content{
     height: 187px;
@@ -349,7 +348,7 @@
 #scrollDiv li{transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;}
 #scrollDiv{width:100%;height:33px; overflow:hidden; display: block;}
 .scroltit{ position: absolute; right:0px; top:0px;width:18px;height: 33px;}
-.scroltit small{float:right; font-size:12px;width:18px;height:16px; line-height:16px; text-align: center;color: #fff;font-family: "宋体"; transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;}
-.scroltit small img{margin-top: 3px;
+.scroltit small{float:right; font-size:12px;width:15px;height:13px; line-height:13px; text-align: center;color: #fff;font-family: "宋体"; transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;margin:2px 0;}
+.scroltit small img{
     width: 100%;
     height: 100%;}

@@ -1,6 +1,6 @@
 .E_container{
     width: 1200px;
-    height: 592px;
+    height: 600px;
     margin: 0 auto;
 }
 .E_container_left
@@ -8,6 +8,7 @@
     width: 811px;
     display: block;
     float: left;
+    height: 100%;
     margin-right: 10px;
 }
 .E_container_left dl:nth-of-type(1){
@@ -101,7 +102,7 @@ font-size: 26px;
     height: 100%;
 }
 .E_container_left dl:nth-of-type(2) {
-    height: 296px;
+    height: 305px;
 }
 .E_container_left dl:nth-of-type(2)>dd{
     display: flex;

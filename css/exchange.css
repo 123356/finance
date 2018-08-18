@@ -42,7 +42,7 @@
 }
 .e_con_up_title span{
     height: 34px;
-    border-bottom: 1px solid #1B97F7;
+    border-bottom: 2px solid #1B97F7;
     margin-left: 11px;
     display: inline-block;
     line-height: 34px;
@@ -221,8 +221,15 @@
 }
 .e_containerRight dl:nth-of-type(1){
     width: 398px;
-    height: 468px;
+    height: 480px;
     background-color: white;
+}
+.e_containerRight_item{
+    width: 100%;
+    min-height: 44px;
+    border-bottom: 1px solid #bfbfbf;
+    display: block;
+    overflow: hidden;
 }
 .e_containerRight dl:nth-of-type(1)>dt:nth-of-type(1){
     width: 100%;
@@ -234,14 +241,14 @@
     height: 34px;
     line-height: 34px;
     display: inline-block;
-    border-bottom: 1px solid #1B97F7;
+    border-bottom: 2px solid #1B97F7;
 }
 .e_containerRight dl:nth-of-type(1)>dt:nth-of-type(2){
     width: 100%;
     border-bottom: 1px solid #BFBFBF;
     height: 33px;
 }
-.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(2)>span,.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3)>p>span{
+.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(2)>span,.e_containerRight_item>p>span{
     width:25%;
     height: 100%;
     display: block;
@@ -251,37 +258,31 @@
 }
 .e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3){
     width: 100%;
-    height: 396px;
-    border-bottom: 1px solid #bfbfbf;
+    height: 430px;
 }
-.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3)>p{
-    min-height: 44px;
-    border-bottom: 1px dashed #ccc;
+.e_containerRight_item>p{
+    height: 44px;
     display: block;
     font-size: 16px;
-    float: left;
     width: 100%;
 }
-.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3)>p:nth-last-of-type(1){
+.e_containerRight_item>p:nth-last-of-type(1){
     border: none;
 }
-.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3)>p>span{
+.e_containerRight_item>p>span{
    line-height: 43px;
     height: 43px;
 }
-.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3)>canvas{
+.e_containerRight_item>.canvas>canvas{
     width: 300px;
     height: 130px;
     margin-left: 15px;
+    display: block;
     float: left;
 }
-.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3)>.canvas{
+.e_containerRight_item>.canvas{
     display: none;
     height: 135px;
-    float: left;
-}
-.e_containerRight dl:nth-of-type(1)>dt:nth-of-type(3)>.canvas:nth-of-type(1){
-    display: block;
 }
 .canvas_right{
     width: 70px;
@@ -311,7 +312,7 @@
 }
 .e_Encyclopedia_title span,.e_Encyclopedia_price_title span{
     height: 35px;
-    border-bottom: 1px solid #00A1EB;
+    border-bottom: 2px solid #00A1EB;
     line-height: 35px;
     margin-left: 11px;
     font-size: 18px;
@@ -438,8 +439,6 @@
     text-align: center;
     font-size: 18px;
     background: #fff;
-
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;

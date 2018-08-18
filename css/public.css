@@ -202,12 +202,24 @@ input,select,textarea:focus {
     width: 30%;
     float: right;
 }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:white;
+}
 .Inf_title_content li>input{
-    width: 50%;
+    width: 200px;
     border-radius: 10px;
     height: 31px;
     margin-top: 22px;
-    padding-left: 10%;
+    padding-left: 25px;
     border: 1px solid #fff;
     font-size: 1em;
     margin-left: 10%;
@@ -216,10 +228,10 @@ input,select,textarea:focus {
 }
 .Inf_title_content li>img{
     position: absolute;
-    top: 40%;
-    left: 12%;
-    width: 30px;
-    height: 30px;
+    top: 26px;
+    left: 35px;
+    width: 25px;
+    height: 25px;
 }
 .Inf_title_content li>button{
     width: 60px;
@@ -239,7 +251,7 @@ footer{
     background-color: white;
     height: 313px;
     float: left;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .ind_footer_content{
     width:1200px;

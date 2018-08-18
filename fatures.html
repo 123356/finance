@@ -69,7 +69,7 @@
             <div class="FContainer_banner_right">
                 <div class="wrap">
                     <div class="scrollbox cl">
-                        <div class="scroltit"><small id="but_up"><img src="image/up.png"></small><small id="but_down"><img src="image/down.png"></small></div>
+                        <div class="scroltit"><small id="but_up"><img src="image/downdown.png"></small><small id="but_down"><img src="image/upup.png"></small></div>
                         <div id="scrollDiv">
                              <ul>
                     <li>
@@ -135,49 +135,60 @@
                                     <p>跌涨额</p>
                                 </div>
                                 <div class="ftable_item">
-                                    <p>螺纹指数</p>
-                                    <p>3935</p>
-                                    <p>15.00</p>
-                                    <p>0.38%</p>
-                                </div>
-                                <div class="fchoose">
-                                    <div id="fchoose" style="width: 270px; height: 95px;"></div>
-                                </div>
-                                <div class="ftable_item">
-                                    <p>连豆帕值</p>
-                                    <p>3935</p>
-                                    <p>15.00</p>
-                                    <p>0.38%</p>
-                                </div>
-                                <div class="fchoose">
-                                    <div id="fchoose1" style="width: 270px; height: 95px;"></div>
+                                    <div class="ftable_up">
+                                        <p>螺纹指数</p>
+                                        <p>3935</p>
+                                        <p>15.00</p>
+                                        <p>0.38%</p>
+                                    </div>
+                                    <div class="fchoose" style="display: block;">
+                                        <div id="fchoose" style="width: 270px; height: 95px;"></div>
+                                    </div>
                                 </div>
                                 <div class="ftable_item">
-                                    <p>PTA指数</p>
-                                    <p>3935</p>
-                                    <p>15.00</p>
-                                    <p>0.38%</p>
-                                </div>
-                                <div class="fchoose">
-                                    <div id="fchoose2" style="width: 270px; height: 95px;"></div>
-                                </div>
-                                <div class="ftable_item">
-                                    <p>美黄金指</p>
-                                    <p>3935</p>
-                                    <p>15.00</p>
-                                    <p>0.38%</p>
-                                </div>
-                                <div class="fchoose">
-                                    <div id="fchoose3" style="width: 270px; height: 95px;"></div>
+                                    <div class="ftable_up">
+                                        <p>连豆帕值</p>
+                                        <p>3935</p>
+                                        <p>15.00</p>
+                                        <p>0.38%</p>
+                                    </div>
+                                    <div class="fchoose">
+                                        <div id="fchoose1" style="width: 270px; height: 95px;"></div>
+                                    </div>
                                 </div>
                                 <div class="ftable_item">
-                                    <p>原油指数</p>
-                                    <p>3935</p>
-                                    <p>15.00</p>
-                                    <p>0.38%</p>
+                                    <div class="ftable_up">
+                                        <p>PTA指数</p>
+                                        <p>3935</p>
+                                        <p>15.00</p>
+                                        <p>0.38%</p>
+                                    </div>
+                                    <div class="fchoose">
+                                        <div id="fchoose2" style="width: 270px; height: 95px;"></div>
+                                    </div>
                                 </div>
-                                <div class="fchoose">
-                                    <div id="fchoose4" style="width: 270px; height: 95px;"></div>
+                                <div class="ftable_item">
+                                    <div class="ftable_up">
+                                        <p>PTA指数</p>
+                                        <p>3935</p>
+                                        <p>15.00</p>
+                                        <p>0.38%</p>
+                                    </div>
+                                    <div class="fchoose">
+                                        <div id="fchoose3" style="width: 270px; height: 95px;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="ftable_item">
+                                    <div class="ftable_up">
+                                        <p>PTA指数</p>
+                                        <p>3935</p>
+                                        <p>15.00</p>
+                                        <p>0.38%</p>
+                                    </div>
+                                    <div class="fchoose">
+                                        <div id="fchoose4" style="width: 270px; height: 95px;"></div>
+                                    </div>
                                 </div>
                         </div>
                     </div>
@@ -1078,11 +1089,7 @@
     }
 $(".ftable_item").each(function (index) {
     $(this).hover(function () {
-        $(this).css("border","none")
         $(".fchoose").hide().eq(index).show()
-    })
-    $(this).mouseleave(function () {
-        $(this).css("borderTop","1px solid #ccc")
     })
 })
 </script>
