@@ -19,7 +19,7 @@ body{
     background-color: white;
 }
 .Inf_tnews_left{
-    width: 66%;
+    width: 760px;
     height: 140px;
     float: left;
 }
@@ -28,7 +28,7 @@ body{
     height: 40px;
     border-right: 2px solid #00B7EE;
     border-bottom: 2px solid #00B7EE;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     padding-top: 10px;
     position: relative;
@@ -52,7 +52,7 @@ body{
 .Inf_tnews_left em{
     display: block;
     float: left;
-    margin-left: 2%;
+    margin: -2px 0 0 22px;
     font-weight: 600;
 }
 .Inf_tnews_left li:nth-child(2){
@@ -77,14 +77,17 @@ body{
 }
 .Inf_tnews_right li p{
     display: block;
-    height: 30px;
+    height: 32px;
+    width: 100%;
+    font-size: 16px;
+    overflow: hidden;
 }
 .Inf_tnews_right li p:nth-of-type(1){
-    margin-top: 3px;
+    margin-top: 4px;
 }
 .Inf_tnews_content p:hover,.Inf_tnews_right li p:hover{
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .Inf_tnews_content{
@@ -102,54 +105,51 @@ body{
 }
 .Inf_tnews_content li a {
     display: block;
-    height: 32px;
+    height: 33px;
 }
 .Inf_tnews_content li a:nth-child(3){
     margin-bottom: 0;
-}
-.Inf_tnews_content li a:nth-of-type(1){
-    margin-top: 4px;
 }
 .Inf_tnews_content li p{
     float: left;
     display: block;
     width: 82px;
     background-color: #ccc;
-    height: 100%;
+    height:33px;
     text-align: center;
-    margin-right: 5%;
-    margin-left: 2%;
-    line-height: 30px;
+    line-height: 33px;
 }
 .Inf_tnews_content li span{
     display: block;
     float: left;
-    width: 670px;
+    width: 650px;
     height:32px;
+    line-height: 32px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 .Inf_tnews_content li span:nth-of-type(1){
-    margin-top: 4px;
+   margin-top: 2px;
 }
-.Inf_tnews_right img{
-    width: 30px;
-    height: 30px;
+.inform{
+    width: 20px;
+    height: 20px;
     display: block;
-    margin-left: 1%;
+    margin:2px 5px 0 15px;
     float: left;
 }
 .Inf_tnews_right span{
     display: block;
-    margin-left: 1%;
     float: left;
-    font-size: 1em;
+    font-size: 20px;
     font-weight: 600;
+    margin-top: -2px;
 }
 .Inf_tnews_right{
-    width: 34%;
+    width: 440px;
     height: 100%;
     float: left;
+    overflow: hidden;
 }
 .Inf_change{
     width: 90%;
@@ -161,6 +161,7 @@ body{
     height: 100px;
     width: 90%;
     padding-left: 5%;
+    overflow: hidden;
 }
 .Inf_change li p:hover{
     color:#ff0036;
@@ -168,11 +169,11 @@ body{
 }
 .Inf_acquaint{
     border-bottom:2px solid #00B7EE;
-    height: 45px;
+    height: 40px;
     width: 99%;
     padding-left: 1%;
     padding-top: 10px;
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: 600;
     position: relative;
 }
@@ -375,7 +376,7 @@ body{
     line-height:57px;
     height: 57px;
     width: 100%;
-    font-size:1.5rem;
+    font-size:18px;
     color: #3C3D3D;
     border-bottom:1px solid #ccc;
     float: left;
@@ -466,9 +467,8 @@ body{
 .owl-prev:hover{background-position:-53px 0;}
 .owl-next:hover{background-position:-122px 0;}
 a{
-    text-decoration:none;
+    text-decoration:none!important;
 }
-或者把这个属性分别加到a标签下，
 a:link{
     text-decoration:none;
 }

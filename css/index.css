@@ -356,21 +356,21 @@ body{
     font-size: 14px;
 }
 .ind_con_banner_right nav{
-    width: 90%;
+    width: 100%;
     height: 30px;
-    margin-left: 5%;
     border-bottom: 2px solid #cccccc;
+    background-color: #F8F8F8;
 }
 .ind_con_banner_right nav p{
     display: block;
     height: 30px;
     line-height: 30px;
-}
-.ind_con_banner_right nav p:nth-child(1){
+    font-size: 20px;
     float: left;
 }
 .ind_con_banner_right nav p:nth-child(2){
-    float: right;
+    margin-left: 20px;
+    font-size: 14px;
 }
 .ind_con_banner_right section{
     width: 90%;
