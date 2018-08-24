@@ -14,6 +14,7 @@
     width: 900px;
     float: left;
     margin-right: 10px;
+    margin-top: -10px;
 }
 .C_container_right{
     width: 290px;
@@ -125,12 +126,12 @@
 .C_container_right dl>dt{
     width: 100%;
     height: 35px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
 }
 .C_container_right dl>dt>span{
     display:inline-block;
     height: 35px;
-    border-bottom: 1px solid #00A1EB;
+    border-bottom: 2px solid #00A1EB;
     font-size: 18px;
     line-height: 35px;
     margin-left: 11px;
@@ -255,12 +256,12 @@
 }
 .C_container_right dl:nth-of-type(3){
     width: 100%;
-    height: 520px;
+    height: 490px;
     background-color: white;
     margin-top: 11px;
 }
 .C_container_right dl:nth-of-type(3)>dd{
-    height: 485px;
+    height: 450px;
     width: 100%;
     padding:9px 17px 0px 18px;
 }

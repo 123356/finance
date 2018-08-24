@@ -214,6 +214,10 @@ input,select,textarea:focus {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color:white;
 }
+a:hover{
+    cursor: pointer;
+    color: red;
+}
 .Inf_title_content li>input{
     width: 200px;
     border-radius: 10px;
@@ -289,6 +293,12 @@ footer{
     color: #8D8F8F;
     margin-top:20px;
 }
+a:hover{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
 .ind_footer_content li img{
     display: block;
     width: 90px;
@@ -300,7 +310,7 @@ footer{
 }
 .Inf_banner_up {
     width: 1200px;
-    height:80px;
+    height:60px;
     background:url("../image/banner.jpg") no-repeat;
     background-size: 100% 100%;
     margin: 10px auto;

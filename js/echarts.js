@@ -6271,7 +6271,7 @@ Style.prototype = {
     text: null,
 
     /**
-     * If `fontSize` or `fontFamily` exists, `font` will be reset by
+     * If `fontSize` or `fontFamily` exists, `fonts` will be reset by
      * `fontSize`, `fontStyle`, `fontWeight`, `fontFamily`.
      * So do not visit it directly in upper application (like echarts),
      * but use `contain/text#makeFont` instead.
@@ -6280,33 +6280,33 @@ Style.prototype = {
     font: null,
 
     /**
-     * The same as font. Use font please.
+     * The same as fonts. Use fonts please.
      * @deprecated
      * @type {string}
      */
     textFont: null,
 
     /**
-     * It helps merging respectively, rather than parsing an entire font string.
+     * It helps merging respectively, rather than parsing an entire fonts string.
      * @type {string}
      */
     fontStyle: null,
 
     /**
-     * It helps merging respectively, rather than parsing an entire font string.
+     * It helps merging respectively, rather than parsing an entire fonts string.
      * @type {string}
      */
     fontWeight: null,
 
     /**
-     * It helps merging respectively, rather than parsing an entire font string.
+     * It helps merging respectively, rather than parsing an entire fonts string.
      * Should be 12 but not '12px'.
      * @type {number}
      */
     fontSize: null,
 
     /**
-     * It helps merging respectively, rather than parsing an entire font string.
+     * It helps merging respectively, rather than parsing an entire fonts string.
      * @type {string}
      */
     fontFamily: null,
@@ -7246,7 +7246,7 @@ function prepareTruncateOptions(containerWidth, font, ellipsis, options) {
     // Other languages?
     options.cnCharWidth = getWidth('国', font);
     // FIXME
-    // Consider proportional font?
+    // Consider proportional fonts?
     var ascCharWidth = options.ascCharWidth = getWidth('a', font);
     options.placeholder = retrieve2(options.placeholder, '');
 
@@ -7421,7 +7421,7 @@ function parsePlainText(text, font, padding, truncate) {
  *              textWidth, // pure text width
  *              textHeight, // pure text height
  *              lineHeihgt,
- *              font,
+ *              fonts,
  *              textAlign,
  *              textVerticalAlign
  *          }], [...], ...]
@@ -7480,7 +7480,7 @@ function parseRichText(text, style) {
             // textPadding should not inherit from style.
             var textPadding = token.textPadding = tokenStyle.textPadding;
 
-            // textFont has been asigned to font by `normalizeStyle`.
+            // textFont has been asigned to fonts by `normalizeStyle`.
             var font = token.font = tokenStyle.font || style.font;
 
             // textHeight can be used when textVerticalAlign is specified in token.
@@ -7632,12 +7632,12 @@ function pushTokens(block, str, styleName) {
 
 function makeFont(style) {
     // FIXME in node-canvas fontWeight is before fontStyle
-    // Use `fontSize` `fontFamily` to check whether font properties are defined.
+    // Use `fontSize` `fontFamily` to check whether fonts properties are defined.
     var font = (style.fontSize || style.fontFamily) && [
         style.fontStyle,
         style.fontWeight,
         (style.fontSize || 12) + 'px',
-        // If font properties are defined, `fontFamily` should not be ignored.
+        // If fonts properties are defined, `fontFamily` should not be ignored.
         style.fontFamily || 'sans-serif'
     ].join(' ');
     return font && trim(font) || style.textFont || style.font;
@@ -7823,7 +7823,7 @@ function renderPlainText(hostEl, ctx, text, style, rect) {
 
     setCtx(ctx, 'textAlign', textAlign || 'left');
     // Force baseline to be "middle". Otherwise, if using "top", the
-    // text will offset downward a little bit in font "Microsoft YaHei".
+    // text will offset downward a little bit in fonts "Microsoft YaHei".
     setCtx(ctx, 'textBaseline', 'middle');
 
     // Always set shadowBlur and shadowOffset to avoid leak from displayable.
@@ -8002,7 +8002,7 @@ function placeToken(hostEl, ctx, token, style, lineHeight, lineTop, x, textAlign
 
     setCtx(ctx, 'textAlign', textAlign);
     // Force baseline to be "middle". Otherwise, if using "top", the
-    // text will offset downward a little bit in font "Microsoft YaHei".
+    // text will offset downward a little bit in fonts "Microsoft YaHei".
     setCtx(ctx, 'textBaseline', 'middle');
 
     setCtx(ctx, 'font', token.font || DEFAULT_FONT);
@@ -17064,7 +17064,7 @@ var textStyleMixin = {
     },
 
     /**
-     * Create font string from fontStyle, fontWeight, fontSize, fontFamily
+     * Create fonts string from fontStyle, fontWeight, fontSize, fontFamily
      * @return {string}
      */
     getFont: function () {
@@ -68244,7 +68244,7 @@ function makeRenderItem(customSeries, data, ecModel, api) {
      * @param {number} [opt.fontWeight]
      * @param {number} [opt.fontSize]
      * @param {string} [opt.fontFamily]
-     * @return {string} font string
+     * @return {string} fonts string
      */
     function font(opt) {
         return getFont(opt, ecModel);
@@ -70498,7 +70498,7 @@ function assembleFont(textStyleModel) {
 
     color && cssText.push('color:' + color);
 
-    cssText.push('font:' + textStyleModel.getFont());
+    cssText.push('fonts:' + textStyleModel.getFont());
 
     fontSize &&
         cssText.push('line-height:' + Math.round(fontSize * 3 / 2) + 'px');
@@ -86261,7 +86261,7 @@ DataView.prototype.onclick = function (ecModel, api) {
         // Use default textarea
         viewMain.appendChild(textarea);
         textarea.readOnly = model.get('readOnly');
-        textarea.style.cssText = 'width:100%;height:100%;font-family:monospace;font-size:14px;line-height:1.6rem;';
+        textarea.style.cssText = 'width:100%;height:100%;fonts-family:monospace;fonts-size:14px;line-height:1.6rem;';
         textarea.style.color = model.get('textColor');
         textarea.style.borderColor = model.get('textareaBorderColor');
         textarea.style.backgroundColor = model.get('textareaColor');
@@ -86274,7 +86274,7 @@ DataView.prototype.onclick = function (ecModel, api) {
     buttonContainer.style.cssText = 'position:absolute;bottom:0;left:0;right:0;';
 
     var buttonStyle = 'float:right;margin-right:20px;border:none;'
-        + 'cursor:pointer;padding:2px 5px;font-size:12px;border-radius:3px';
+        + 'cursor:pointer;padding:2px 5px;fonts-size:12px;border-radius:3px';
     var closeButton = document.createElement('div');
     var refreshButton = document.createElement('div');
 
@@ -87812,7 +87812,7 @@ if (!env$1.canvasSupported) {
         try {
             textMeasureEl.style.font = textFont;
         } catch (ex) {
-            // Ignore failures to set to invalid font.
+            // Ignore failures to set to invalid fonts.
         }
         textMeasureEl.innerHTML = '';
         // Don't use innerHTML or innerText because they allow markup/whitespace.
@@ -88012,7 +88012,7 @@ if (!env$1.canvasSupported) {
         try {
             textPathEl.style.font = font;
         }
-        // Error font format
+        // Error fonts format
         catch (e) {}
 
         updateFillAndStroke(textVmlEl, 'fill', {

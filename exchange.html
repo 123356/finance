@@ -69,7 +69,7 @@
                 </div>
                 <ul>
                     <li><input type="text" value="实时">
-                        <marquee behavior="scroll"  scrolldelay="80" scrollamount="2" direction="up" onmouseover=this.stop() onmouseout=this.start()>6.8失守！人民币兑美元跌跌不休 能否守住7？</marquee></li>
+                        <marquee id="Marquee" behavior="scroll"  scrolldelay="80" scrollamount="2" direction="up" onmouseover=this.stop() onmouseout=this.start()><div>6.8失守！人民币兑美元跌跌不休 能否守住7？</div></marquee></li>
                     <li><span></span>磐石策略：2018年7月26日外汇黄金交易提醒磐石策略：2018年7月26日外汇黄金交易提醒</li>
                     <li><span></span>磐石策略：2018年7月26日外汇黄金交易提醒磐石策略：2018年7月26日外汇黄金交易提醒</li>
                     <li><span></span>磐石策略：2018年7月26日外汇黄金交易提醒磐石策略：2018年7月26日外汇黄金交易提醒</li>
@@ -350,7 +350,7 @@
         </div>
         <div class="e_Encyclopedia_radio">
             <div class="e_Encyclopedia_radio_up">
-                <video src="video/123.mp4" controls></video>
+                <video src="video/123.mp4" controls autobuffer></video>
                 <!--<div class="menu"></div>-->
             </div>
             <div class="e_Encyclopedia_radio_down">
@@ -900,5 +900,27 @@
                 prevEl: '.e_prev',
         },
     });
+    // var Mar = document.getElementById("Marquee");
+    // var child_div=Mar.getElementsByTagName("div")
+    // var picH = 25;//移动高度
+    // var scrollstep=1;//移动步幅,越大越快
+    // var scrolltime=20;//移动频度(毫秒)越大越慢
+    // var stoptime=3000;//间断时间(毫秒)
+    // var tmpH = 0;
+    // Mar.innerHTML += Mar.innerHTML;
+    // function start(){
+    //     if(tmpH < picH){
+    //         tmpH += scrollstep;
+    //         if(tmpH > picH )tmpH = picH ;
+    //         Mar.scrollTop = tmpH;
+    //         setTimeout(start,scrolltime);
+    //     }else{
+    //         tmpH = 0;
+    //         Mar.appendChild(child_div[0]);
+    //         Mar.scrollTop = 0;
+    //         setTimeout(start,stoptime);
+    //     }
+    // }
+    // onload=function(){setTimeout(start,stoptime)};
 </script>
 </html>
