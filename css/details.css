@@ -7,7 +7,8 @@
     width: 1200px;
     margin: 0 auto;
     display: block;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    position: relative;
     padding: 0;
 }
 .D_container_left{
@@ -44,6 +45,7 @@
     width: 100%;
     height: 615px;
     background-color: white;
+    position: relative;
 }
 .dd_title{
     width: 100%;
@@ -225,4 +227,32 @@
 .D_container_right1 dd>p>span:nth-of-type(2){
     font-size: 12px;
     display: block;
+}
+.D_container_leftBox{
+    position: absolute;
+    left: -40px;
+    top: 240px;
+    width: 60px;
+    height: 120px;
+}
+.D_container_leftBox li>.imgOne{
+    width: 36px;
+    border-radius: 50%;
+}
+.D_container_leftBox li>.imgTwo{
+    width: 0px;
+    border-radius: 5px;
+}
+.D_container_leftBox li{
+    position:relative;
+    margin-bottom: 4px;
+    height: 36px;
+    width: 36px;
+    display: block;
+}
+.D_container_leftBox li>img{
+    position: absolute;
+    height: 36px;
+    left: 0;
+    top: 0;
 }

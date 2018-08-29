@@ -1,13 +1,13 @@
   64136303.
   <div class="com_container_left_topic">
     <div class="com_topic_recommend">
-        <div class="com_topic_recommend_title">专题推荐</div>
+        <div class="com_topic_recommend_title">专锟斤拷锟狡硷拷</div>
         <div class="com_topic_recommend_down">
             <ul>
                 <li>
-                    <p><img src="image/person.jpg" alt=""></p>
-                    <p>又一家独角兽领IPO批文 新三
-                        板排队企业降至92家</p>
+                    <p><img lazyload="true" src=""  data-original="image/person.jpg" alt=""></p>
+                    <p>锟斤拷一锟揭讹拷锟斤拷锟斤拷锟斤拷IPO锟斤拷锟斤拷 锟斤拷锟斤拷
+                        锟斤拷锟脚讹拷锟斤拷业锟斤拷锟斤拷92锟斤拷</p>
                 </li>
                 <li></li>
                 <li></li>

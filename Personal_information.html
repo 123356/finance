@@ -25,22 +25,22 @@
                 <li>排行榜</li>
                 <li>app</li>
                 <li>
-                    <img src="image/account.png" alt="" class="Per_account">
+                    <img lazyload="true" src=""  data-original="image/account.png" alt="" class="Per_account">
                     <span>啦啦啦</span>
-                    <img src="image/pulldown.png" alt="" class="Per_pulldown">
+                    <img lazyload="true" src=""  data-original="image/pulldown.png" alt="" class="Per_pulldown">
                 </li>
             </ul>
         </div>
     </div>
     <div class="Per_banner">
-        <img src="image/banner.jpg" alt="">
+        <img lazyload="true" src=""  data-original="image/banner.jpg" alt="">
     </div>
     <div class="Per_content">
         <div class="Per_content_left">
             <div class="Per_content_left_title">
                 <ul>
                     <li>
-                        <img src="image/psb.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/psb.png" alt="">
                     </li>
                     <li>
                         <strong>用户名</strong>(123456789)
@@ -271,11 +271,9 @@
             </div>
         </div>
     </div>
-
 </div>
 <div id="address" data-src="js/area.json"></div>
 <footer>
-
 </footer>
 </body>
 <script src="js/jquery3.2.1.min.js"></script>
@@ -284,9 +282,10 @@
     $(".Per_information_right input").each(function (index) {
         $(this).blur(function () {
             if($(this).val()==""){
-                $(this).focus()
+                // $(this).focus()
                 $(".Per_information_right span").hide().eq(index).show()
             }else{
+                $(".Per_information_right span").hide()
             }
         })
     })

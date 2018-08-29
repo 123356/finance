@@ -1,0 +1,121 @@
+.RContainer{
+    width: 325px;
+    height: 470px;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    overflow: visible;
+}
+.RContainer-img,.RContainer dl{
+    position: absolute;
+    width: 325px;
+    height: 470px;
+    top: 0;
+    left: 0;
+}
+.RContainer-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.RContainer dl dt,.RContainer dl dd {
+    height: 50%;
+    width: 100%;
+    display: block;
+}
+.RContainer dl dt{
+    overflow: hidden;
+}
+.RContainer dl dd{
+    overflow: visible;
+}
+.RContainer dl dt img{
+    width: 245px;
+    height: 182px;
+    display: block;
+    margin: 26.5px auto;
+}
+.inputOne,.inputTwo{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 14px;
+}
+.inputTwo{
+    margin-top: 10px;
+}
+.inputOne input,.inputTwo input{
+    width:94px;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #DB5042;
+    background-color: #F76154;
+    text-align: center;
+    line-height: 30px;
+    color:#FEF3C5;
+    font-size: 14px;
+}
+.inputThree{
+    margin-top: 16px;
+    position: relative;
+}
+.inputThree2,.inputThree3{
+    width: 271px;
+    height: 32px;
+    border: 1px solid #FEF3C5;
+    background-color: #F76154;
+    border-radius: 5px;
+    display: block;
+    margin:0 auto 10px;
+    padding-left: 15px;
+    color:#FEF3C5;
+    font-size: 14px;
+}
+.inputMoney{
+    position: absolute;
+    right: 45px;
+    top: 5px;
+    color:#FEF3C5;
+}
+.inputMoney input{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color:#F76154;
+}
+input::-webkit-input-placeholder{
+    color:#FEF3C5;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#FEF3C5;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#FEF3C5;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#FEF3C5;
+}
+.snapMoney{
+    width: 69px;
+    height: 69px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -34.5px;
+    margin: auto;
+}
+.RMark{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.82);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}

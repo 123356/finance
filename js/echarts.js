@@ -85728,7 +85728,7 @@ proto$4.onclick = function (ecModel, api) {
             var lang$$1 = model.get('lang');
             var html = '' +
                 '<body style="margin:0;">' +
-                '<img src="' + url + '" style="max-width:100%;" title="' + ((lang$$1 && lang$$1[0]) || '') + '" />' +
+                '<img lazyload="true" src=""  data-original="' + url + '" style="max-width:100%;" title="' + ((lang$$1 && lang$$1[0]) || '') + '" />' +
                 '</body>';
             var tab = window.open();
             tab.document.write(html);

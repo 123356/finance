@@ -13,10 +13,26 @@
 <header></header>
 <div class="D_container_sum">
     <div class="D_container">
+        <div class="D_container_leftBox">
+            <ul>
+                <li>
+                    <img lazyload="true" src=""  data-original="image/qqq.png" alt="" class="imgOne">
+                    <img lazyload="true" src=""  data-original="image/addqq.png" alt="" class="imgTwo">
+                </li>
+                <li>
+                    <img lazyload="true" src=""  data-original="image/wei.png" alt="" class="imgOne">
+                    <img lazyload="true" src=""  data-original="image/addwei.png" alt="" class="imgTwo">
+                </li>
+                <li>
+                    <img lazyload="true" src=""  data-original="image/bo.png" alt="" class="imgOne">
+                    <img lazyload="true" src=""  data-original="image/addbo.png" alt="" class="imgTwo">
+                </li>
+            </ul>
+        </div>
         <div class="D_container_left">
             <dl>
                 <dt>
-                    <img src="image/person.jpg" alt="">
+                    <img lazyload="true" src=""  data-original="image/person.jpg" alt="">
                 </dt>
                 <dd>
                     <div class="dd_title">
@@ -56,69 +72,69 @@
         <div class="D_container_right">
             <dl>
                 <dt>
-                    <img src="image/rr.png" alt="">
+                    <img lazyload="true" src=""  data-original="image/rr.png" alt="">
                     <span>精选视频</span>
                 </dt>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
                 <dd>
                     <video src="video/123.mp4" controls></video>
                     <p>
-                        <img src="image/radioo.png" alt="">
+                        <img lazyload="true" src=""  data-original="image/radioo.png" alt="">
                         <span>扩内需依赖消费，但国内居民的消费潜力并不那么乐观。国信...</span>
                     </p>
                 </dd>
@@ -146,6 +162,18 @@
                 "overflow":"hidden"
             })
         }
+    })
+    $(".imgOne").each(function (index) {
+        $(this).hover(function () {
+            $(".imgTwo").eq(index).delay().animate({width:123},"slow")
+            $(".D_container_leftBox li").eq(index).delay().animate({width:130},"slow")
+            $(".D_container_leftBox").animate({left:-130},"slow")
+        })
+        $(".imgTwo").eq(index).mouseleave(function () {
+            $(".imgTwo").eq(index).delay().animate({width:0},"slow")
+            $(".D_container_leftBox li").eq(index).delay().animate({width:40},"slow")
+            $(".D_container_leftBox").animate({left:-40},"slow")
+        })
     })
 </script>
 </html>
