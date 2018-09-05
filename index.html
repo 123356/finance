@@ -7,10 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <script src="js/jquery3.2.1.min.js"></script>
-
     <title>首页</title>
 </head>
 <body>
@@ -331,19 +328,21 @@
                         <li>上证指数</li>
                     </ul>
                 </div>
-                <div class="ind_canvas1">
-                    <div id="ind_canvas_left" style="height:124px; width: 204px;">
-                    </div>
-                    <div class="ind_canvas_right">
-                        <ul>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="ind_canvas">
-                    <div id="ind_canvas_left1" style="height:124px; width: 204px;">
+                    <div class="ind_canvas_left">
+                        <div class="canvasLeft">
+                            <p>2799.28</p>
+                            <p>2784.82</p>
+                            <p>2770.36</p>
+                            <p>2755.90</p>
+                            <p>2741.45</p>
+                        </div>
+                        <canvas id="c1" width="144px" height="98px"></canvas>
+                        <div class="canvasRight">
+                            <p>9:30</p>
+                            <p>11:30</p>
+                            <p>15:00</p>
+                        </div>
                     </div>
                     <div class="ind_canvas_right">
                         <ul>
@@ -361,17 +360,6 @@
                         <li>上证指数</li>
                     </ul>
                 </div>
-                <div class="ind_canvas">
-                    <div id="ind_canvas_left2" style="height:124px; width: 204px;">
-                    </div>
-                    <div class="ind_canvas_right">
-                        <ul>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="ind_index">
                     <ul>
                         <li>上证指数</li>
@@ -380,17 +368,6 @@
                         <li>上证指数</li>
                     </ul>
                 </div>
-                <div class="ind_canvas">
-                    <div id="ind_canvas_left3"  style="height:124px; width: 204px;">
-                    </div>
-                    <div class="ind_canvas_right">
-                        <ul>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="ind_index">
                     <ul>
                         <li>上证指数</li>
@@ -398,20 +375,9 @@
                         <li>上证指数</li>
                         <li>上证指数</li>
                     </ul>
-                </div>
-                <div class="ind_canvas">
-                    <div id="ind_canvas_left4" style="height:124px; width: 204px;">
-                    </div>
-                    <div class="ind_canvas_right">
-                        <ul>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                            <li>涨跌排行</li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="ind_search">
-                    <input type="text" placeholder="代码/简称/拼音" class="input">
+                    <input type="text" placeholder="代码/简称/拼音" class="input" data-live-search="true">
                     <input type="button" value="查询" class="ind_search_button">
                     <a href="">【自选股】</a>
                 </div>
@@ -583,6 +549,9 @@
 <footer>
 </footer>
 </body>
+<script>
+    $("footer").load("footer.html")
+</script>
 <script src="js/echarts.js"></script>
 <script src="js/index1.js"></script>
 </html>

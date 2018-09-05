@@ -434,7 +434,7 @@ $("header").load("header.html")
 $("footer").load("footer.html")
 $(".e_containerRight_item").each(function (index) {
     $(this).hover(function () {
-        $(".canvas").hide().eq(index).show()
+        $(".canvas1").hide().eq(index).show()
     })
 })
 

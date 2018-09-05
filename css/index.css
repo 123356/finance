@@ -205,6 +205,9 @@ body{
     display: inline-block;
     font-size: 24px;
 }
+.ind_login_up li input:hover{
+    cursor: pointer;
+}
 .ind_login_down p:nth-child(1){
     color: black;
     display: block;
@@ -489,8 +492,11 @@ body{
     margin: 0 auto;
     border-bottom: 1px solid #ccc;
 }
-.ind_canvas{
-    display: none;
+.ind_canvas_left{
+    width: 204px;
+    height: 128px;
+    float: left;
+    position: relative;
 }
 #ind_canvas_left,#ind_canvas_left1,#ind_canvas_left2,#ind_canvas_left3,#ind_canvas_left4
 {
@@ -522,7 +528,7 @@ body{
 }
 .ind_last_item_right i{
     font-style: normal;
-    color: #1B97F7;
+    color: #62a1f8;
 }
 .ind_ranking{
     width: 297px;
@@ -559,6 +565,9 @@ body{
 .ind_nav_content li{
     transition: all 0.3s ;
 }
+.ind_nav_content li a:hover{
+    cursor: pointer;
+}
 .ind_nav_content li:hover{
     color: white;
     transform:scale3d(1.2,1.2,1.2);
@@ -594,7 +603,7 @@ body{
     margin-right: 0;
 }
 .ind_Change li:nth-child(1){
-    background-color: #1B97F7;
+    background-color: #62a1f8;
 }
 .ind_Change li:nth-child(1) .ind_Change_arrow{
     display: block;
@@ -606,7 +615,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color:#1B97F7;
+    background-color:#62a1f8;
 }
 .ind_Change li{
     background-color: #C8C8C8;
@@ -723,6 +732,7 @@ body{
     padding-left: 15px;
     margin-top: 5px;
     width: 40%;
+    margin-left: 5px;
 }
 .ind_search a{
     display: block;
@@ -950,4 +960,51 @@ body{
 }
 .active1{
     z-index: 999;
+}
+.ind_index{
+    width: 277px;
+    margin: 0 auto;
+}
+canvas{
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+.canvasLeft{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top:10px;
+}
+
+.canvasLeft p{
+    font-size: 12px;
+    color:#9D9D9D;
+    text-align: right;
+    display: block;
+    margin-bottom:7px;
+}
+.canvasLeft p:nth-of-type(1){
+    margin-top: -6px;
+}
+.canvasRight{
+    width: 144px;
+    height: 12px;
+    position: absolute;
+    left: 50px;
+    bottom: 5px;
+}
+.canvasRight p{
+    width: 33%;
+    height: 100%;
+    display: block;
+    float: left;
+    color:#9d9d9d;
+    font-size: 12px;
+    text-align: center;
+}
+.canvasRight p:last-of-type{
+    text-align: right;
 }

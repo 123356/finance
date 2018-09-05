@@ -6,430 +6,390 @@ $('.FContainer_banner_left dl dt>p:nth-of-type(2)>span:nth-of-type(2)').each(fun
         $(this).html($(this).html()+'...');
     }
 });
-var chs=echarts.init(document.getElementById('fchoose'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
-}
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
+var data = [
+    [{x:1, y:60,time:'9:00'},
+        {x:2, y:8,time:'9:00'},
+        {x:4, y:90,time:'9:00'},
+        {x:6, y:58,time:'9:00'},
+        {x:9,y:90,time:'21:00'},
+        {x:30,y:30,time:'21:00'},
+        {x:40,y:40,time:'21:00'},
+        {x:50, y:55,time:'21:00'},
+        {x:55,y:60,time:'15:00'},
+        {x:59,y:70,time:'15:00'},
+        {x:60,y:40,time:'15:00'},
+        {x:61, y:15,time:'15:00'},
+        {x:62,y:50,time:'15:00'},
+        {x:65,y:30,time:'15:00'},
+        {x:70,y:40,time:'15:00'}
+    ],
+    [
+        {x:30,y:30,time:'21:00'},
+        {x:40,y:40,time:'21:00'},
+        {x:50, y:55,time:'21:00'},
+        {x:55,y:60,time:'15:00'},
+        {x:59,y:70,time:'15:00'},
+        {x:60,y:40,time:'15:00'},
+        {x:61, y:15,time:'15:00'},
+        {x:62,y:50,time:'15:00'},
+        {x:65,y:30,time:'15:00'},
+        {x:70,y:40,time:'15:00'},
+        {x:75,y:40,time:'15:00'},
+        {x:76, y:15,time:'15:00'},
+        {x:77,y:50,time:'15:00'},
+        {x:82,y:30,time:'15:00'},
+        {x:90,y:40,time:'15:00'}
+    ],
+    [{x:1, y:50,time:'9:00'},
+        {x:2, y:77,time:'9:00'},
+        {x:4, y:60,time:'9:00'},
+        {x:6, y:58,time:'9:00'},
+        {x:9,y:90,time:'21:00'},
+        {x:30,y:30,time:'21:00'},
+        {x:40,y:40,time:'21:00'},
+        {x:50, y:55,time:'21:00'},
+        {x:55,y:60,time:'15:00'},
+        {x:59,y:70,time:'15:00'},
+        {x:60,y:40,time:'15:00'},
+        {x:61, y:15,time:'15:00'},
+        {x:62,y:50,time:'15:00'},
+        {x:65,y:30,time:'15:00'},
+        {x:70,y:40,time:'15:00'}
+    ],
+    [{x:1, y:50,time:'9:00'},
+        {x:2, y:77,time:'9:00'},
+        {x:4, y:60,time:'9:00'},
+        {x:6, y:58,time:'9:00'},
+        {x:9,y:90,time:'21:00'},
+        {x:30,y:30,time:'21:00'},
+        {x:40,y:40,time:'21:00'},
+        {x:50, y:55,time:'21:00'},
+        {x:55,y:60,time:'15:00'},
+        {x:59,y:70,time:'15:00'},
+        {x:60,y:40,time:'15:00'},
+        {x:61, y:15,time:'15:00'},
+        {x:62,y:50,time:'15:00'},
+        {x:65,y:30,time:'15:00'},
+        {x:70,y:40,time:'15:00'}
+    ],
+    [{x:1, y:50,time:'9:00'},
+        {x:2, y:77,time:'9:00'},
+        {x:4, y:60,time:'9:00'},
+        {x:6, y:58,time:'9:00'},
+        {x:9,y:90,time:'15:00'},
+        {x:30,y:30,time:'15:00'},
+        {x:40,y:40,time:'15:00'},
+        {x:50, y:55,time:'15:00'},
+        {x:55,y:60,time:'15:00'},
+        {x:59,y:70,time:'15:00'},
+        {x:60,y:40,time:'15:00'},
+        {x:61, y:15,time:'15:00'},
+        {x:62,y:50,time:'15:00'},
+        {x:65,y:30,time:'15:00'},
+        {x:70,y:40,time:'15:00'}
     ]
-};
-chs.setOption(option);
-window.onresize=chs.resize()
-
-var chs=echarts.init(document.getElementById('fchoose1'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+]
+var LineChart = function (cxt) {
+    this.cxt= cxt || document.getElementById('c1').getContext('2d');
+    this.canvasWidth=this.cxt.canvas.width;
+    this.canvasHeight=this.cxt.canvas.height;
+    this.gridSize=10;
+    this.space=20;
+    this.arrowSize=10
+    this.dottedSize = 6;
+    this.x0 = this.canvasWidth/3;
+    this.y0 = this.canvasHeight;
 }
-
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
-    ]
-};
-chs.setOption(option);
-window.onresize=chs.resize()
-
-var chs=echarts.init(document.getElementById('fchoose2'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+LineChart.prototype.init = function (data) {
+    this.drawGrid();
+    this.drawDotted(data)
 }
-
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
-    ]
-};
-chs.setOption(option);
-window.onresize=chs.resize()
-
-var chs=echarts.init(document.getElementById('fchoose3'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+LineChart.prototype.drawGrid = function () {
+    var xline=Math.floor(this.canvasHeight / 4);
+    var yline=Math.floor(this.canvasWidth / 3);
+    for(var i = 0;i <4; i++){
+        this.cxt.beginPath();
+        this.cxt.moveTo(0,i * xline-0.5);
+        this.cxt.lineTo(this.canvasWidth,i * xline-0.5)
+        this.cxt.strokeStyle='#eee'
+        this.cxt.setLineDash([5])
+        this.cxt.stroke()
+        this.cxt.closePath()
+    }
+    for(var i = 0;i <3; i++){
+        this.cxt.beginPath();
+        this.cxt.moveTo(i * yline-0.5,0);
+        this.cxt.lineTo(i * yline-0.5,this.canvasHeight)
+        this.cxt.stroke()
+        this.cxt.closePath()
+    }
 }
-
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
+LineChart.prototype.drawDotted = function (data) {
+    var yline1=Math.floor(this.canvasWidth / 4);
+    this.cxt.lineWidth =1;
+    var that=this
+    var precanvasx=0;
+    var precanvasy=0
+    var i1 =[]
+    var i2 = []
+    data.forEach(function (item,i) {
+        i1.push(item.y)
+        i2.push(item.x)
+    })
+    var iMax = Math.max.apply(null,i1);
+    var aHeight = [];
+    for(var i = 0;i<i1.length;i++){
+        aHeight[i] = i1[i]/iMax*this.cxt.canvas.height;
+    }
+    var iw = Math.max.apply(null,i2)
+    var awidth = []
+    for (var i = 0; i < i2.length; i++) {
+        awidth[i] = i2[i]/iw * this.cxt.canvas.width
+    }
+    data.forEach(function (item,i) {
+        var canvasX=that.x0+awidth[i]
+        var canvasY=that.y0-aHeight[i]
+        var linger = that.cxt.createLinearGradient(that.x0,that.y0,canvasX,canvasY)
+        linger.addColorStop(1,'rgba(235,242,253,0.3)')
+        linger.addColorStop(1,'rgba(235,242,253,0.3)')
+        //绘制折线
+        if(i ==0){
+            that.cxt.beginPath();
+            that.cxt.lineTo(canvasX,canvasY)
+            that.cxt.setLineDash([0])
+            that.cxt.lineWidth = 1.2
+            that.cxt.strokeStyle='#B0D7FF'
+            that.cxt.stroke()
+        }else{
+            that.cxt.beginPath();
+            that.cxt.moveTo(precanvasx,precanvasy)
+            that.cxt.lineTo(canvasX,canvasY)
+            that.cxt.stroke()
+            that.cxt.beginPath()
+            that.cxt.fillStyle = linger
+            that.cxt.moveTo(canvasX,that.y0);
+            that.cxt.lineTo(canvasX,canvasY);
+            that.cxt.lineTo(precanvasx,precanvasy);
+            that.cxt.lineTo(precanvasx,that.y0);
+            that.cxt.fill()
+            that.cxt.closePath()
         }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
-    ]
-};
-chs.setOption(option);
-window.onresize=chs.resize()
-
-var chs=echarts.init(document.getElementById('fchoose4'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+        precanvasx=canvasX;
+        precanvasy=canvasY
+    })
+    this.cxt.beginPath()
+    this.cxt.moveTo(0,this.y0/2)
+    this.cxt.lineTo(this.canvasWidth,this.y0/2)
+    this.cxt.lineWidth =1.5;
+    this.cxt.strokeStyle = '#A7B8C9'
+    this.cxt.setLineDash([0])
+    this.cxt.stroke()
+    this.cxt.closePath()
 }
+var lineChart = new LineChart()
+lineChart.init(data[0])
+$(".ftable_up").each(function (index) {
+    $(this).mouseenter(function () {
+        var cxt= cxt || document.getElementById('c1').getContext('2d');
+        $(this).after($(".FCanvas1"))
+        cxt.clearRect(0,0,cxt.canvas.width,cxt.canvas.height)
+        lineChart.init(data[index])
+    })
+})
 
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
+$(".FContent_right").each(function (index) {
+    var data = [
+        [{x:1, y:60,time:'9:00'},
+            {x:2, y:8,time:'9:00'},
+            {x:4, y:90,time:'9:00'},
+            {x:6, y:58,time:'9:00'},
+            {x:9,y:90,time:'21:00'},
+            {x:30,y:30,time:'21:00'},
+            {x:40,y:40,time:'21:00'},
+            {x:50, y:55,time:'21:00'},
+            {x:55,y:60,time:'15:00'},
+            {x:59,y:70,time:'15:00'},
+            {x:60,y:40,time:'15:00'},
+            {x:61, y:15,time:'15:00'},
+            {x:62,y:50,time:'15:00'},
+            {x:65,y:30,time:'15:00'},
+            {x:70,y:40,time:'15:00'}
+        ],
+        [
+            {x:30,y:30,time:'21:00'},
+            {x:40,y:40,time:'21:00'},
+            {x:50, y:55,time:'21:00'},
+            {x:55,y:60,time:'15:00'},
+            {x:59,y:70,time:'15:00'},
+            {x:60,y:40,time:'15:00'},
+            {x:61, y:15,time:'15:00'},
+            {x:62,y:50,time:'15:00'},
+            {x:65,y:30,time:'15:00'},
+            {x:70,y:40,time:'15:00'},
+            {x:75,y:40,time:'15:00'},
+            {x:76, y:15,time:'15:00'},
+            {x:77,y:50,time:'15:00'},
+            {x:82,y:30,time:'15:00'},
+            {x:90,y:40,time:'15:00'}
+        ],
+        [{x:1, y:50,time:'9:00'},
+            {x:2, y:77,time:'9:00'},
+            {x:4, y:60,time:'9:00'},
+            {x:6, y:58,time:'9:00'},
+            {x:9,y:90,time:'21:00'},
+            {x:30,y:30,time:'21:00'},
+            {x:40,y:40,time:'21:00'},
+            {x:50, y:55,time:'21:00'},
+            {x:55,y:60,time:'15:00'},
+            {x:59,y:70,time:'15:00'},
+            {x:60,y:40,time:'15:00'},
+            {x:61, y:15,time:'15:00'},
+            {x:62,y:50,time:'15:00'},
+            {x:65,y:30,time:'15:00'},
+            {x:70,y:40,time:'15:00'}
+        ],
+        [{x:1, y:50,time:'9:00'},
+            {x:2, y:77,time:'9:00'},
+            {x:4, y:60,time:'9:00'},
+            {x:6, y:58,time:'9:00'},
+            {x:9,y:90,time:'21:00'},
+            {x:30,y:30,time:'21:00'},
+            {x:40,y:40,time:'21:00'},
+            {x:50, y:55,time:'21:00'},
+            {x:55,y:60,time:'15:00'},
+            {x:59,y:70,time:'15:00'},
+            {x:60,y:40,time:'15:00'},
+            {x:61, y:15,time:'15:00'},
+            {x:62,y:50,time:'15:00'},
+            {x:65,y:30,time:'15:00'},
+            {x:70,y:40,time:'15:00'}
+        ],
+        [{x:1, y:50,time:'9:00'},
+            {x:2, y:77,time:'9:00'},
+            {x:4, y:60,time:'9:00'},
+            {x:6, y:58,time:'9:00'},
+            {x:9,y:90,time:'15:00'},
+            {x:30,y:30,time:'15:00'},
+            {x:40,y:40,time:'15:00'},
+            {x:50, y:55,time:'15:00'},
+            {x:55,y:60,time:'15:00'},
+            {x:59,y:70,time:'15:00'},
+            {x:60,y:40,time:'15:00'},
+            {x:61, y:15,time:'15:00'},
+            {x:62,y:50,time:'15:00'},
+            {x:65,y:30,time:'15:00'},
+            {x:70,y:40,time:'15:00'}
+        ]
     ]
-};
-chs.setOption(option);
-window.onresize=chs.resize()
-
+    var LineChart = function (cxt) {
+        this.cxt= cxt || document.getElementById('c'+(index+2)).getContext('2d');
+        this.canvasWidth=this.cxt.canvas.width;
+        this.canvasHeight=this.cxt.canvas.height;
+        this.gridSize=10;
+        this.space=20;
+        this.arrowSize=10
+        this.dottedSize = 6;
+        this.x0 = this.canvasWidth/3;
+        this.y0 = this.canvasHeight;
+    }
+    LineChart.prototype.init = function (data) {
+        this.drawGrid();
+        this.drawDotted(data)
+    }
+    LineChart.prototype.drawGrid = function () {
+        var xline=Math.floor(this.canvasHeight / 4);
+        var yline=Math.floor(this.canvasWidth / 3);
+        for(var i = 0;i <4; i++){
+            this.cxt.beginPath();
+            this.cxt.moveTo(0,i * xline-0.5);
+            this.cxt.lineTo(this.canvasWidth,i * xline-0.5)
+            this.cxt.strokeStyle='#eee'
+            this.cxt.setLineDash([5])
+            this.cxt.stroke()
+            this.cxt.closePath()
+        }
+        for(var i = 0;i <3; i++){
+            this.cxt.beginPath();
+            this.cxt.moveTo(i * yline-0.5,0);
+            this.cxt.lineTo(i * yline-0.5,this.canvasHeight)
+            this.cxt.stroke()
+            this.cxt.closePath()
+        }
+    }
+    LineChart.prototype.drawDotted = function (data) {
+        var yline1=Math.floor(this.canvasWidth / 4);
+        this.cxt.lineWidth =1;
+        var that=this
+        var precanvasx=0;
+        var precanvasy=0
+        var i1 =[]
+        var i2 = []
+        data.forEach(function (item,i) {
+            i1.push(item.y)
+            i2.push(item.x)
+        })
+        var iMax = Math.max.apply(null,i1);
+        var aHeight = [];
+        for(var i = 0;i<i1.length;i++){
+            aHeight[i] = i1[i]/iMax*this.cxt.canvas.height;
+        }
+        var iw = Math.max.apply(null,i2)
+        var awidth = []
+        for (var i = 0; i < i2.length; i++) {
+            awidth[i] = i2[i]/iw * this.cxt.canvas.width
+        }
+        data.forEach(function (item,i) {
+            var canvasX=that.x0+awidth[i]
+            var canvasY=that.y0-aHeight[i]
+            var linger = that.cxt.createLinearGradient(that.x0,that.y0,canvasX,canvasY)
+            linger.addColorStop(1,'rgba(235,242,253,0.3)')
+            linger.addColorStop(1,'rgba(235,242,253,0.3)')
+            //绘制折线
+            if(i ==0){
+                that.cxt.beginPath();
+                that.cxt.lineTo(canvasX,canvasY)
+                that.cxt.setLineDash([0])
+                that.cxt.lineWidth = 1.2
+                that.cxt.strokeStyle='#B0D7FF'
+                that.cxt.stroke()
+            }else{
+                that.cxt.beginPath();
+                that.cxt.moveTo(precanvasx,precanvasy)
+                that.cxt.lineTo(canvasX,canvasY)
+                that.cxt.stroke()
+                that.cxt.beginPath()
+                that.cxt.fillStyle = linger
+                that.cxt.moveTo(canvasX,that.y0);
+                that.cxt.lineTo(canvasX,canvasY);
+                that.cxt.lineTo(precanvasx,precanvasy);
+                that.cxt.lineTo(precanvasx,that.y0);
+                that.cxt.fill()
+                that.cxt.closePath()
+            }
+            precanvasx=canvasX;
+            precanvasy=canvasY
+        })
+        this.cxt.beginPath()
+        this.cxt.moveTo(0,this.y0/2)
+        this.cxt.lineTo(this.canvasWidth,this.y0/2)
+        this.cxt.lineWidth =1.5;
+        this.cxt.strokeStyle = '#A7B8C9'
+        this.cxt.setLineDash([0])
+        this.cxt.stroke()
+        this.cxt.closePath()
+    }
+    var lineChart = new LineChart()
+    lineChart.init(data[index])
+    var my = $(this).find('table').find('.t1')
+    var t = index
+    my.each(function (index) {
+        var cxt= cxt || document.getElementById('c'+(t+2)).getContext('2d');
+        $(this).mouseenter(function () {
+            cxt.clearRect(0,0,cxt.canvas.width,cxt.canvas.height)
+            lineChart.init(data[index])
+        })
+    })
+})
     $("header").load("header.html")
 $("footer").load("footer.html")
 $(".FContainer_banner_right  dl").mouseenter(function () {
@@ -458,348 +418,13 @@ prev.onclick=function(){
     }
     ineer.style.marginLeft=-338.5*n+"px";
 }
-$(".ftable_item").each(function (index) {
-    $(this).hover(function () {
-        $(".fchoose").hide().eq(index).show()
+var tim = document.querySelectorAll(".FCanvasTop span")
+setInterval(function () {
+    var d = new Date();
+    var YMDHMS = d.getFullYear() + "-" +(d.getMonth()+1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    tim.forEach(function (item) {
+        item.innerHTML = YMDHMS
     })
-})
+},1000)
 
-var hart = echarts.init(document.getElementById('ththumb'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
 
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
-}
-
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
-    ]
-};
-hart.setOption(option);
-window.onresize=hart.resize()
-
-var hart = echarts.init(document.getElementById('ththumb1'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
-}
-
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
-    ]
-};
-hart.setOption(option);
-window.onresize=hart.resize()
-
-var hart = echarts.init(document.getElementById('ththumb2'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
-}
-
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
-    ]
-};
-hart.setOption(option);
-window.onresize=hart.resize()
-
-var hart = echarts.init(document.getElementById('ththumb3'));
-var base = +new Date(1968, 9, 3);
-var oneDay = 24 * 3600 * 1000;
-var date = [];
-
-var data = [Math.random() * 300];
-
-for (var i = 1; i < 20000; i++) {
-    var now = new Date(base += oneDay);
-    date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
-    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
-}
-
-option = {
-    tooltip: {
-        trigger: 'axis',
-        position: function (pt) {
-            return [pt[0], '10%'];
-        }
-    },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
-    dataZoom: [{
-        type: 'inside',
-        start: 0,
-        end: 10
-    }, {
-        start: 0,
-        end: 10,
-        handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-        handleSize: '80%',
-        handleStyle: {
-            color: '#fff',
-            shadowBlur: 3,
-            shadowColor: 'rgba(0, 0, 0, 0.6)',
-            shadowOffsetX: 2,
-            shadowOffsetY: 2
-        }
-    }],
-    series: [
-        {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
-                }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data
-        }
-    ]
-};
-hart.setOption(option);
-window.onresize=hart.resize()

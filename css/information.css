@@ -25,8 +25,8 @@ body{
 .Inf_news{
     width: 100%;
     height: 40px;
-    border-right: 2px solid #00B7EE;
-    border-bottom: 2px solid #00B7EE;
+    border-right: 2px solid #62a1f8;
+    border-bottom: 2px solid #62a1f8;
     font-size: 20px;
     font-weight: 600;
     padding-top: 10px;
@@ -57,7 +57,7 @@ body{
 .Inf_tnews_left li:nth-child(2){
     width: 100%;
     height: 100px;
-    border-right: 2px solid #00B7EE ;
+    border-right: 2px solid #62a1f8 ;
 }
 .Inf_tnews_left span:nth-child(1){
     float: left;
@@ -167,7 +167,7 @@ body{
     cursor: pointer;
 }
 .Inf_acquaint{
-    border-bottom:2px solid #00B7EE;
+    border-bottom:2px solid #62a1f8;
     height: 40px;
     width: 99%;
     padding-left: 1%;
@@ -244,7 +244,7 @@ body{
 .Inf_dot{
     width: 8px;
     height: 8px;
-    background-color: #00B7EE;
+    background-color: #62a1f8;
     border-radius: 50%;
     display: block;
     float: left;
@@ -291,7 +291,7 @@ body{
     bottom: 0px;
 }
 .Inf_item_right p>span:nth-child(4){
-    color:#2ABDEF;
+    color:#62a1f8;
 }
 .Inf_item_right p>span{
     margin-right: 10px;
@@ -311,7 +311,7 @@ body{
     font-size: 18px;
 }
 .Inf_right_Code li:nth-child(1)>span,.con_title>span{
-    border-bottom: 2px solid #00A1EB;
+    border-bottom: 2px solid #62a1f8;
     height: 60px;
     display: inline-block;
 }
@@ -412,7 +412,7 @@ body{
 .Inf_right_picture img{
     width: 70px;
     height: 70px;
-    margin:10px auto;
+    margin:5px auto;
     border-radius: 50%;
 }
 .Inf_right_ad{

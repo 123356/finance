@@ -107,6 +107,17 @@
     padding-left: 15px;
     font-size: 16px;
     color:#BFBFBF;
+    line-height: 45px;
+}
+#sign_test1 option{
+    height: 45px;
+    line-height: 45px;
+}
+#sign_test1 optgroup{
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    display:inline-block;
 }
 .sign_content a{
     display: block;

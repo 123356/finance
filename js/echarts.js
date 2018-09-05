@@ -97,7 +97,7 @@ else if (typeof navigator === 'undefined') {
         os: {},
         node: true,
         worker: false,
-        // Assume canvas is supported
+        // Assume canvas1 is supported
         canvasSupported: true,
         svgSupported: true
     };
@@ -241,7 +241,7 @@ var BUILTIN_OBJECT = {
     '[object Error]': 1,
     '[object CanvasGradient]': 1,
     '[object CanvasPattern]': 1,
-    // For node-canvas
+    // For node-canvas1
     '[object Image]': 1,
     '[object Canvas]': 1
 };
@@ -1846,7 +1846,7 @@ each$1(['click', 'mousedown', 'mouseup', 'mousewheel', 'dblclick', 'contextmenu'
         }
         else if (name === 'click') {
             if (this._downEl !== this._upEl
-                // Original click event is triggered on the whole canvas element,
+                // Original click event is triggered on the whole canvas1 element,
                 // including the case that `mousedown` - `mousemove` - `mouseup`,
                 // which should be filtered, otherwise it will bring trouble to
                 // pan and zoom.
@@ -6839,7 +6839,7 @@ Layer.prototype = {
             var clearColorGradientOrPattern;
             // Gradient
             if (clearColor.colorStops) {
-                // Cache canvas gradient
+                // Cache canvas1 gradient
                 clearColorGradientOrPattern = clearColor.__canvasGradient || Style.getGradient(ctx, clearColor, {
                     x: 0,
                     y: 0,
@@ -7631,7 +7631,7 @@ function pushTokens(block, str, styleName) {
 }
 
 function makeFont(style) {
-    // FIXME in node-canvas fontWeight is before fontStyle
+    // FIXME in node-canvas1 fontWeight is before fontStyle
     // Use `fontSize` `fontFamily` to check whether fonts properties are defined.
     var font = (style.fontSize || style.fontFamily) && [
         style.fontStyle,
@@ -8547,7 +8547,7 @@ ZImage.prototype = {
         //         return;
         //     }
         // }
-        // Else is canvas
+        // Else is canvas1
 
         var x = style.x || 0;
         var y = style.y || 0;
@@ -8711,7 +8711,7 @@ var Painter = function (root, storage, opts) {
 
     this.type = 'canvas';
 
-    // In node environment using node-canvas
+    // In node environment using node-canvas1
     var singleCanvas = !root.nodeName // In node ?
         || root.nodeName.toUpperCase() === 'CANVAS';
 
@@ -8767,7 +8767,7 @@ var Painter = function (root, storage, opts) {
     this._layerConfig = {};
 
     /**
-     * zrender will do compositing when root is a canvas and have multiple zlevels.
+     * zrender will do compositing when root is a canvas1 and have multiple zlevels.
      */
     this._needsManuallyCompositing = false;
 
@@ -8792,19 +8792,19 @@ var Painter = function (root, storage, opts) {
         }
         this.dpr = opts.devicePixelRatio || 1;
 
-        // Use canvas width and height directly
+        // Use canvas1 width and height directly
         root.width = width * this.dpr;
         root.height = height * this.dpr;
 
         this._width = width;
         this._height = height;
 
-        // Create layer if only one given canvas
+        // Create layer if only one given canvas1
         // Device can be specified to create a high dpi image.
         var mainLayer = new Layer(root, this, this.dpr);
         mainLayer.__builtin__ = true;
         mainLayer.initContext();
-        // FIXME Use canvas width and height
+        // FIXME Use canvas1 width and height
         // mainLayer.resize(width, height);
         layers[CANVAS_ZLEVEL] = mainLayer;
         mainLayer.zlevel = CANVAS_ZLEVEL;
@@ -8832,7 +8832,7 @@ Painter.prototype = {
     },
 
     /**
-     * If painter use a single canvas
+     * If painter use a single canvas1
      * @return {boolean}
      */
     isSingleCanvas: function () {
@@ -9097,7 +9097,7 @@ Painter.prototype = {
             && !el.invisible
             // Ignore transparent element
             && el.style.opacity !== 0
-            // Ignore scale 0 element, in some environment like node-canvas
+            // Ignore scale 0 element, in some environment like node-canvas1
             // Draw a scale 0 element can cause all following draw wrong
             // And setTransform with scale 0 will cause set back transform failed.
             && !(m && !m[0] && !m[3])
@@ -9506,7 +9506,7 @@ Painter.prototype = {
     },
 
     /**
-     * Get canvas which has all thing rendered
+     * Get canvas1 which has all thing rendered
      * @param {Object} opts
      * @param {string} [opts.backgroundColor]
      * @param {number} [opts.pixelRatio]
@@ -10581,7 +10581,7 @@ var version$1 = '4.0.4';
  * Initializing a zrender instance
  * @param {HTMLElement} dom
  * @param {Object} opts
- * @param {string} [opts.renderer='canvas'] 'canvas' or 'svg'
+ * @param {string} [opts.renderer='canvas1'] 'canvas1' or 'svg'
  * @param {number} [opts.devicePixelRatio]
  * @param {number|string} [opts.width] Can be 'auto' (the same as null/undefined)
  * @param {number|string} [opts.height] Can be 'auto' (the same as null/undefined)
@@ -10639,7 +10639,7 @@ function delInstance(id) {
  * @param {string} id
  * @param {HTMLElement} dom
  * @param {Object} opts
- * @param {string} [opts.renderer='canvas'] 'canvas' or 'svg'
+ * @param {string} [opts.renderer='canvas1'] 'canvas1' or 'svg'
  * @param {number} [opts.devicePixelRatio]
  * @param {number} [opts.width] Can be 'auto' (the same as null/undefined)
  * @param {number} [opts.height] Can be 'auto' (the same as null/undefined)
@@ -10770,7 +10770,7 @@ ZRender.prototype = {
     },
 
     /**
-     * Repaint the canvas immediately
+     * Repaint the canvas1 immediately
      */
     refreshImmediately: function () {
         // var start = new Date();
@@ -10790,7 +10790,7 @@ ZRender.prototype = {
     },
 
     /**
-     * Mark and repaint the canvas in the next frame of browser
+     * Mark and repaint the canvas1 in the next frame of browser
      */
     refresh: function() {
         this._needsRefresh = true;
@@ -10864,7 +10864,7 @@ ZRender.prototype = {
     },
 
     /**
-     * Resize the canvas.
+     * Resize the canvas1.
      * Should be invoked when container size is changed
      * @param {Object} [opts]
      * @param {number|string} [opts.width] Can be 'auto' (the same as null/undefined)
@@ -10898,7 +10898,7 @@ ZRender.prototype = {
     },
 
     /**
-     * Export the canvas as Base64 URL
+     * Export the canvas1 as Base64 URL
      * @param {string} type
      * @param {string} [backgroundColor='#fff']
      * @return {string} Base64 URL
@@ -10970,7 +10970,7 @@ ZRender.prototype = {
 
 
     /**
-     * Clear all objects and the canvas.
+     * Clear all objects and the canvas1.
      */
     clear: function () {
         this.storage.delRoot();
@@ -16067,7 +16067,7 @@ function resizePath(path, rect) {
 }
 
 /**
- * Sub pixel optimize line for canvas
+ * Sub pixel optimize line for canvas1
  *
  * @param {Object} param
  * @param {Object} [param.shape]
@@ -16093,7 +16093,7 @@ function subPixelOptimizeLine(param) {
 }
 
 /**
- * Sub pixel optimize rect for canvas
+ * Sub pixel optimize rect for canvas1
  *
  * @param {Object} param
  * @param {Object} [param.shape]
@@ -16126,7 +16126,7 @@ function subPixelOptimizeRect(param) {
 }
 
 /**
- * Sub pixel optimize for canvas
+ * Sub pixel optimize for canvas1
  *
  * @param {number} position Coordinate, such as x, y
  * @param {number} lineWidth Should be nonnegative integer.
@@ -16135,7 +16135,7 @@ function subPixelOptimizeRect(param) {
  */
 function subPixelOptimize(position, lineWidth, positiveOrNegative) {
     // Assure that (position + lineWidth / 2) is near integer edge,
-    // otherwise line will be fuzzy in canvas.
+    // otherwise line will be fuzzy in canvas1.
     var doubledPosition = round(position * 2);
     return (doubledPosition + round(lineWidth)) % 2 === 0
         ? doubledPosition / 2
@@ -16714,7 +16714,7 @@ function getFont(opt, ecModel) {
     // ecModel or default text style model.
     var gTextStyleModel = ecModel || ecModel.getModel('textStyle');
     return trim([
-        // FIXME in node-canvas fontWeight is before fontStyle
+        // FIXME in node-canvas1 fontWeight is before fontStyle
         opt.fontStyle || gTextStyleModel && gTextStyleModel.getShallow('fontStyle') || '',
         opt.fontWeight || gTextStyleModel && gTextStyleModel.getShallow('fontWeight') || '',
         (opt.fontSize || gTextStyleModel && gTextStyleModel.getShallow('fontSize') || 12) + 'px',
@@ -25417,7 +25417,7 @@ echartsProto.setOption = function (option, notMerge, lazyUpdate) {
 
         updateMethods.update.call(this);
 
-        // Ensure zr refresh sychronously, and then pixel in canvas can be
+        // Ensure zr refresh sychronously, and then pixel in canvas1 can be
         // fetched after `setOption`.
         this._zr.flush();
 
@@ -25472,7 +25472,7 @@ echartsProto.getDevicePixelRatio = function () {
 };
 
 /**
- * Get canvas which has all thing rendered
+ * Get canvas1 which has all thing rendered
  * @param {Object} opts
  * @param {string} [opts.backgroundColor]
  * @return {string}
@@ -26166,7 +26166,7 @@ echartsProto.makeActionFromEvent = function (eventObj) {
  * @param {Object|boolean} [opt] If pass boolean, means opt.silent
  * @param {boolean} [opt.silent=false] Whether trigger events.
  * @param {boolean} [opt.flush=undefined]
- *                  true: Flush immediately, and then pixel in canvas can be fetched
+ *                  true: Flush immediately, and then pixel in canvas1 can be fetched
  *                      immediately. Caution: it might affect performance.
  *                  false: Not not flush.
  *                  undefined: Auto decide whether perform flush.
@@ -26655,7 +26655,7 @@ function updateBlend(seriesModel, chartView) {
     var blendMode = seriesModel.get('blendMode') || null;
     if (__DEV__) {
         if (!env$1.canvasSupported && blendMode && blendMode !== 'source-over') {
-            console.warn('Only canvas support blendMode');
+            console.warn('Only canvas1 support blendMode');
         }
     }
     chartView.group.traverse(function (el) {
@@ -26811,7 +26811,7 @@ function enableConnect(chart) {
  * @param {Object} [theme]
  * @param {Object} opts
  * @param {number} [opts.devicePixelRatio] Use window.devicePixelRatio by default
- * @param {string} [opts.renderer] Currently only 'canvas' is supported.
+ * @param {string} [opts.renderer] Currently only 'canvas1' is supported.
  * @param {number} [opts.width] Use clientWidth of the input `dom` by default.
  *                              Can be 'auto' (the same as null/undefined)
  * @param {number} [opts.height] Use clientHeight of the input `dom` by default.
@@ -27137,15 +27137,15 @@ function extendChartView(opts/*, superClass*/) {
 }
 
 /**
- * ZRender need a canvas context to do measureText.
- * But in node environment canvas may be created by node-canvas.
- * So we need to specify how to create a canvas instead of using document.createElement('canvas')
+ * ZRender need a canvas1 context to do measureText.
+ * But in node environment canvas1 may be created by node-canvas1.
+ * So we need to specify how to create a canvas1 instead of using document.createElement('canvas1')
  *
  * Be careful of using it in the browser.
  *
  * @param {Function} creator
  * @example
- *     var Canvas = require('canvas');
+ *     var Canvas = require('canvas1');
  *     var echarts = require('echarts');
  *     echarts.setCanvasCreator(function () {
  *         // Small size is enough.
@@ -35251,7 +35251,7 @@ function getVisualGradient(data, coordSys) {
     }
 
     // If the area to be rendered is bigger than area defined by LinearGradient,
-    // the canvas spec prescribes that the color of the first stop and the last
+    // the canvas1 spec prescribes that the color of the first stop and the last
     // stop should be used. But if two stops are added at offset 0, in effect
     // browsers use the color of the second stop to render area outside
     // LinearGradient. So we can only infinitesimally extend area defined in
@@ -41250,7 +41250,7 @@ var LargeSymbolPath = extendShape({
         }
 
         this.setTransform(ctx);
-        // PENDING If style or other canvas status changed?
+        // PENDING If style or other canvas1 status changed?
         for (var i = 0; i < points.length;) {
             var x = points[i++];
             var y = points[i++];
@@ -61648,10 +61648,10 @@ function Heatmap() {
 
 Heatmap.prototype = {
     /**
-     * Renders Heatmap and returns the rendered canvas
+     * Renders Heatmap and returns the rendered canvas1
      * @param {Array} data array of data, each has x, y, value
-     * @param {number} width canvas width
-     * @param {number} height canvas height
+     * @param {number} width canvas1 width
+     * @param {number} height canvas1 height
      */
     update: function(data, width, height, normalize, colorFunc, isInRange) {
         var brush = this._getBrush();
@@ -61684,7 +61684,7 @@ Heatmap.prototype = {
             return canvas;
         }
 
-        // colorize the canvas using alpha value and set with gradient
+        // colorize the canvas1 using alpha value and set with gradient
         var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
         var pixels = imageData.data;
@@ -61717,9 +61717,9 @@ Heatmap.prototype = {
     },
 
     /**
-     * get canvas of a black circle brush used for canvas to draw later
+     * get canvas1 of a black circle brush used for canvas1 to draw later
      * @private
-     * @returns {Object} circle brush canvas
+     * @returns {Object} circle brush canvas1
      */
     _getBrush: function() {
         var brushCanvas = this._brushCanvas || (this._brushCanvas = createCanvas());
@@ -61734,14 +61734,14 @@ Heatmap.prototype = {
 
         // in order to render shadow without the distinct circle,
         // draw the distinct circle in an invisible place,
-        // and use shadowOffset to draw shadow in the center of the canvas
+        // and use shadowOffset to draw shadow in the center of the canvas1
         ctx.shadowOffsetX = d;
         ctx.shadowBlur = this.blurSize;
         // draw the shadow in black, and use alpha and shadow blur to generate
         // color in color map
         ctx.shadowColor = '#000';
 
-        // draw circle in the left to the canvas
+        // draw circle in the left to the canvas1
         ctx.beginPath();
         ctx.arc(-r, r, this.pointSize, 0, Math.PI * 2, true);
         ctx.closePath();
@@ -70675,8 +70675,8 @@ TooltipContent.prototype = {
     },
 
     moveTo: function (x, y) {
-        // xy should be based on canvas root. But tooltipContent is
-        // the sibling of canvas root. So padding of ec container
+        // xy should be based on canvas1 root. But tooltipContent is
+        // the sibling of canvas1 root. So padding of ec container
         // should be considered here.
         var zr = this._zr;
         var viewportRootOffset;
@@ -77345,7 +77345,7 @@ var DataZoomModel = extendComponentModel({
     doInit: function (rawOption) {
         var thisOption = this.option;
 
-        // Disable realtime view update if canvas is not supported.
+        // Disable realtime view update if canvas1 is not supported.
         if (!env$1.canvasSupported) {
             thisOption.realtime = false;
         }
@@ -79848,7 +79848,7 @@ var VisualMapModel = extendComponentModel({
 
         // FIXME
         // necessary?
-        // Disable realtime view update if canvas is not supported.
+        // Disable realtime view update if canvas1 is not supported.
         if (!env$1.canvasSupported) {
             thisOption.realtime = false;
         }
@@ -80475,7 +80475,7 @@ function getColorStopValues(visualMapModel, valueState, dataExtent) {
     }
 
     // When using colorHue mapping, it is not linear color any more.
-    // Moreover, canvas gradient seems not to be accurate linear.
+    // Moreover, canvas1 gradient seems not to be accurate linear.
     // FIXME
     // Should be arbitrary value 100? or based on pixel size?
     var count = 200;
@@ -87618,7 +87618,7 @@ if (!env$1.canvasSupported) {
             // If filters are necessary (rotation exists), create them
             // filters are bog-slow, so only create them if abbsolutely necessary
             // The following check doesn't account for skews (which don't exist
-            // in the canvas spec (yet) anyway.
+            // in the canvas1 spec (yet) anyway.
             // From excanvas
             var p0 = [x, y];
             var p1 = [x + dw, y];
@@ -89389,7 +89389,7 @@ GradientManager.prototype.updateDom = function (gradient, dom) {
     }
 
     if (gradient.global) {
-        // x1, x2, y1, y2 in range of 0 to canvas width or height
+        // x1, x2, y1, y2 in range of 0 to canvas1 width or height
         dom.setAttribute('gradientUnits', 'userSpaceOnUse');
     }
     else {
@@ -89766,7 +89766,7 @@ ShadowManager.prototype.updateDom = function (displayable, dom) {
     domChild.setAttribute('dy', offsetY / scaleY);
     domChild.setAttribute('flood-color', color);
 
-    // Divide by two here so that it looks the same as in canvas
+    // Divide by two here so that it looks the same as in canvas1
     // See: https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-shadowblur
     var stdDx = blur / 2 / scaleX;
     var stdDy = blur / 2 / scaleY;

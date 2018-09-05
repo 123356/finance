@@ -6,14 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>注册</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/information.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-select.js"></script>
-    <script src="js/bootstrap.js"></script>
 </head>
 <body>
 <div class="mask">
@@ -32,9 +27,9 @@
                     <option>期货</option>
                     <option>证券</option>
                 </select>
-                <label for="id_select"></label>
-                <select id="id_select" class="selectpicker bla bla bli" multiple data-live-search="true">
-                    <optgroup label="请选择你的渠道" >请选择你的渠道</optgroup>
+                <label for="sign_test1"></label>
+                <select id="sign_test1"  multiple data-live-search="true">
+                    <optgroup label="请选择你的渠道" >请选择你渠道</optgroup>
                     <option >1</option>
                     <option>2</option>
                     <option>3</option>
@@ -68,6 +63,7 @@
     <p>Copyright©陕西先秦网络科技有限责任公司版权所有</p>
 </div>
 </body>
+<script src="js/jquery-1.8.3.min.js"></script>
 <script>
     $("header").load("header.html")
     function yzm(){
@@ -77,10 +73,5 @@
             str += ''+arr[Math.floor(Math.random() * arr.length)];
         return str;
     }
-        $(window).on('load', function () {
-            $('.selectpicker').selectpicker({
-                'selectedText': 'cat'
-            });
-        });
 </script>
 </html>

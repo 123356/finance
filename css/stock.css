@@ -43,7 +43,7 @@ body{
 .s_containerLeft_table{
     width: 100%;
     height: 405px;
-    border-top: 1px solid #1B97F7;
+    border-top: 1px solid #62a1f8;
     background-color: white;
     margin: 19px auto 16px;
     border-spacing: 0;
@@ -195,7 +195,7 @@ body{
     margin-right: 10px;
 }
 .s_container_middle_down li:nth-child(2) p:nth-child(2)>span:nth-child(2){
-    color: #1B97F7;
+    color: #62a1f8;
 }
 .s_container_middle_down li:nth-child(2) p:nth-child(2)>span:nth-child(3){
     color: #B7B6B6;
@@ -234,7 +234,7 @@ body{
     float: left;
 }
 .s_container_right_title p:nth-of-type(1){
-    border-top: 1px solid #1B97F7;
+    border-top: 1px solid #62a1f8;
     background-color: white;
 }
 .s_container_right_up table{
@@ -295,7 +295,7 @@ body{
     width: 100%;
     line-height: 30px;
     font-size: 16px;
-    border-top: 1px solid #1B97F7;
+    border-top: 1px solid #62a1f8;
     background-color: #E4F3FF;
     text-indent: 16px;
 }
