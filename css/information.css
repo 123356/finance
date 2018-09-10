@@ -34,7 +34,7 @@ body{
 }
 .Inf_triangle{
     position: absolute;
-    bottom:-2px;
+    bottom:-2.3px;
     left:55px;
     z-index: 3;
 }
@@ -177,13 +177,13 @@ body{
     position: relative;
 }
 .Inf_news_picture{
-    width: 100%;
+    width: 1200px;
     height: 65px;
 }
 .Inf_news_picture img{
-    width: 23%;
+    width: 291px;
     height: 100%;
-    margin-right: 2%;
+    margin-right: 12px;
     display: block;
     float: left;
 }
@@ -343,8 +343,8 @@ body{
     text-align: center;
     line-height: 37px;
     background-color: #F8F8F8;
-    border: 1px solid #48C9EF;
-    color:#48C9EF
+    border: 1px solid #62a1f8;
+    color:#62a1f8
 }
 .Inf_right_Code li p:nth-child(1){
     width: 50%;

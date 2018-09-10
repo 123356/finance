@@ -7,7 +7,6 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>注册</title>
     <link rel="stylesheet" href="css/public.css">
-    <link rel="stylesheet" href="css/information.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
@@ -43,11 +42,11 @@
                     <canvas id="canvas" style="width:135px;height:40px;" onclick="toggleVeritification();">你的浏览器不支持canvas,请更换浏览器!</canvas>
                 </div>
                 <div class="sign_picture">
-                    <input type="text" placeholder="请输入手机验证吗"id="input1" >
+                    <input type="text" placeholder="请输入手机验证吗"id="input1"  name="gray">
                     <div class="sign_code1">获取验证码</div>
                 </div>
                 <button  class="login_content_login">立即注册</button>
-                <a  href="login.html">已有账号？立即登录</a>
+                <a target="_blank"  href="login.html">已有账号？立即登录</a>
             </form>
         </div>
     </div>
@@ -222,4 +221,5 @@
     };
 
 </script>
+<script src="js/index.js"></script>
 </html>

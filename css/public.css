@@ -1,4 +1,3 @@
-
 article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 html,body {
     -webkit-text-size-adjust: 100%;
@@ -8,7 +7,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 14px;
-    color: #333;
+    color: #323232;
     font-family: "microsoft yahei",sans-serif;
     min-width: 1200px;
     background-color: #eeeeee;
@@ -46,7 +45,7 @@ a{
     font-family: "microsoft yahei";
     text-decoration: none;
     outline: 0;
-    color: #333;
+    color: #323232;
     -webkit-user-select: none;
 }
 a:focus {
@@ -85,6 +84,8 @@ input,select,textarea:focus {
     width: 100%;
     height:40px;
     background-color: #4B4B4B;
+    z-index: 9999;
+    position: relative;
 }
 .Inf_nav_content{
     width: 1200px;
@@ -223,22 +224,22 @@ a:hover{
 }
 .Inf_title_content li>input{
     width: 200px;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 31px;
     margin-top: 22px;
     padding-left: 25px;
     border: 1px solid #fff;
-    font-size: 1em;
+    font-size: 14px;
     margin-left: 10%;
     background: none;
     color: white;
 }
 .Inf_title_content li>img{
     position: absolute;
-    top: 26px;
-    left: 35px;
-    width: 25px;
-    height: 25px;
+    top: 28px;
+    left: 40px;
+    width: 22px;
+    height: 22px;
 }
 .Inf_title_content li>button{
     width: 60px;
