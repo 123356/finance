@@ -256,3 +256,9 @@
     left: 550px;
     top: 190px;
 }
+#canvas{
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    display: block;
+    float: right;
+}

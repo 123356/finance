@@ -232,6 +232,7 @@
     border-bottom: 1px solid #bfbfbf;
     display: block;
     overflow: hidden;
+    position: relative;
 }
 .e_containerRight dl:nth-of-type(1)>dt:nth-of-type(1){
     width: 100%;
@@ -276,21 +277,25 @@
     height: 43px;
 }
 .e_containerRight_item>.canvas>canvas{
-    width: 300px;
-    height: 130px;
+    width: 310px;
+    height: 100px;
     margin-left: 15px;
     display: block;
     float: left;
+    border: 1px solid #D6D8D9;
 }
 .e_containerRight_item>.canvas{
-    display: none;
     height: 135px;
+    position: relative;
 }
 .canvas_right{
-    width: 70px;
-    height: 130px;
+    width: 50px;
+    height: 100px;
     display: block;
-    float: right;
+    float: left;
+    position: absolute;
+    top: 0px;
+    right: 20px;
 }
 .canvas_right p{
     width: 100%;
@@ -447,3 +452,13 @@
 }
 #Marquee{ height:100%; overflow:hidden;}
 #Marquee div{  height:23px; line-height: 23px;padding-left: 15px}
+.canvasBottom{
+    width: 310px;
+    height: 17px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ccc;
+    margin-left: 15px;
+}

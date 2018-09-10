@@ -180,19 +180,24 @@
 }
 .channel{
     width: 100%;
+    overflow: hidden;
 }
 .channel p{
     display: block;
     float: left;
-    width:80px;
+    width:40px;
     font-size: 18px;
+
 }
-.channel p>input{
+.channel p+input{
     border: 1px solid #ccc;
     width: 15px;
     height: 15px;
+    display: block;
+    float: left;
+    margin:4px 30px 0 0;
     /*display: inline-block;*/
-    margin-left: 5px;
+    color:black;
 }
 .Editor_container dl:nth-of-type(3){
     width: 337px;

@@ -35,7 +35,7 @@
         </ul>
     </div>
     <div class="inf_hidden">
-        <div class="Inf_title_content">
+        <div class="inf_hidden_content">
             <span>融资</span>
             <span>学院</span>
             <span>讲座</span>
@@ -50,9 +50,15 @@
         $(".Inf_title_content span a").each(function(){
             $this = $(this);
             if($this[0].href==String(window.location)){
-                $(".Inf_title_content span").removeClass("active");
-                $(".Inf_title_content span a").removeClass("active");
-                $this.addClass("active");
+                console.log($this[0])
+                $this.addClass("addColor");
+            }
+        });
+        $(".inf_hidden_content span a").each(function(){
+            $this = $(this);
+            if($this[0].href==String(window.location)){
+                console.log($this[0])
+                $this.addClass("addColor");
             }
         });
     });

@@ -64,7 +64,7 @@ img {
 input,textarea {
     -webkit-tap-highlight-color: transparent;
     font-family: "microsoft yahei";
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
 }
 input,select,textarea:focus {
     outline: none;
@@ -170,7 +170,7 @@ input,select,textarea:focus {
 }
 .inf_hidden{
     width: 100%;
-    background-color: #58ACFC;
+    background-color: #62a1f8;
     display: none;
     border-top: 1px solid #ccc;
     z-index: 99;
@@ -183,6 +183,9 @@ input,select,textarea:focus {
     margin: 0 auto;
     height: 75px;
     z-index: 99;
+}
+.addColor{
+    color: #fff;
 }
 .inf_hidden span{
     width: 10%;
@@ -304,9 +307,6 @@ a{
     width: 90px;
     height: 90px;
     margin: 25px auto 0;
-}
-.active{
-    color:white;
 }
 .Inf_banner_up {
     width: 1200px;
