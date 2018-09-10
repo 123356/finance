@@ -179,7 +179,7 @@
     color: #ff0036;
 }
 .ftable_item p:nth-of-type(1){
-    color: #333;
+    color: #323232;
 }
 .ftable_item1{
     height: 28px;
@@ -187,14 +187,14 @@
     text-align: center;
     width: 100%;
     font-size: 14px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #cccccc;
 }
 .ftable_item1 p{
-    color: #333;
+    color: #323232;
 }
 .FContainer_banner_down{
     width: 100%;
-    height: 117px;
+    height: 90px;
     margin: 5px auto;
 }
 .FContainer_banner_down>img{
@@ -261,7 +261,7 @@
     width: 80%;
     margin: 0 auto;
     font-size: 14px;
-    color: #ccc;
+    color: #969696;
     display: block;
 }
 .FContent_right_content{

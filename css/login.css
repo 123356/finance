@@ -85,28 +85,28 @@
     line-height: 40px;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:#BFBFBF;
+    color:#969696;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:#BFBFBF;
+    color:#969696;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:#BFBFBF;
+    color:#969696;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:#BFBFBF;
+    color:#969696;
 }
 .sign_content input:nth-child(1),.sign_content input:nth-child(2),#sign_test,#sign_test1
 {
     width: 80%;
     height: 45px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     display: block;
     margin: 20px auto;
     padding-left: 15px;
     font-size: 16px;
-    color:#BFBFBF;
+    color:#969696;
     line-height: 45px;
 }
 #sign_test1 option{
@@ -130,10 +130,11 @@
     font-size: 1.2em;
 }
 .login_content_account,.login_content_password{
-    border: 1px solid #b0b0b0;
+    border: 1px solid #cccccc;
     display: block;
     width: 80%;
     height:50px;
+    border-radius: 5px;
     margin: 10px auto;
     padding-left: 5%;
     font-size: 16px;
@@ -163,7 +164,7 @@
     display: block;
     text-align:right;
     line-height: 50px;
-    color: #ccc;
+    color: #969696;
     background:none;
     border:none;
     outline: none;

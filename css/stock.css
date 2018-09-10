@@ -277,9 +277,9 @@ body{
     height: 57px;
 }
 .s_container_right_middle li>img{
-    height: 30px;
-    width: 30px;
-    margin: 2px auto;
+    height: 20px;
+    width: 20px;
+    margin: 5px auto;
     display: block;
 }
 .s_container_RightDown{

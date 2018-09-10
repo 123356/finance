@@ -80,9 +80,9 @@ body{
     width: 100%;
     font-size: 16px;
     overflow: hidden;
-}
-.Inf_tnews_right li p:nth-of-type(1){
-    margin-top: 4px;
+    line-height: 32px;
+    margin-top: 2px;
+
 }
 .Inf_tnews_content p:hover,.Inf_tnews_right li p:hover{
     cursor: pointer;
@@ -113,7 +113,7 @@ body{
     float: left;
     display: block;
     width: 82px;
-    background-color: #ccc;
+    background-color: #cccccc;
     height:33px;
     text-align: center;
     line-height: 33px;
@@ -192,27 +192,26 @@ body{
 }
 .Inf_Latest_News{
     width: 100%;
-    height: 68px;
-    line-height: 68px;
+    height: 50px;
+    line-height: 50px;
     display: flex;
     justify-content:flex-start;
 }
 .Inf_Latest_News p{
     margin-right: 20px;
-    display: block;
-    height: 20px;
+    display: inline-block;
     font-size: 18px;
-    color:#ccc
+    color:#969696;
 }
 .Inf_Latest_News p:nth-of-type(1){
-    color:#333;
+    color:#323232;
     font-size: 22px;
 }
 .Inf_Latest_News p:hover{
     cursor: pointer;
-    border-bottom: 1px solid skyblue;
-    font-size: 24px;
-    color:#333;
+    font-size: 22px;
+    border-bottom: 2px solid #62a1f8;
+    color:#323232;
 }
 .Inf_LNews_content{
     width: 792px;
@@ -248,7 +247,7 @@ body{
     border-radius: 50%;
     display: block;
     float: left;
-    margin-top: 7px;
+    margin-top: 12px;
     margin-right: 8px;
     margin-left: 2px;
 }
@@ -278,12 +277,12 @@ body{
     cursor: pointer;
 }
 .Inf_item_right p:nth-child(2){
-    color: #2F3030;
+    color: #323232;
     font-size:16px;
     height: 60px;
 }
 .Inf_item_right p:nth-child(3){
-    color: #B3B3B3;
+    color: #969696;
     font-size:16px;
     height: 25px;
     position: absolute;
@@ -368,7 +367,7 @@ body{
 .con_marquee li{
     width: 100%;
     height: 80px;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed #cccccc;
 }
 .con_title{
     padding-left: 11px;
@@ -376,8 +375,8 @@ body{
     height: 57px;
     width: 100%;
     font-size:18px;
-    color: #3C3D3D;
-    border-bottom:1px solid #ccc;
+    color: #323232;
+    border-bottom:1px solid #cccccc;
     float: left;
 
 }
@@ -396,12 +395,12 @@ body{
 }
 .Inf_right_news p:nth-child(1){
     margin-top: 5px;
-    color: #868585;
+    color: #969696;
     font-size: 18px;
     margin-bottom: 5px;
 }
 .Inf_right_news p:nth-child(2){
-    color: #818181;
+    color: #969696;
     font-size: 16px;
 }
 .Inf_right_picture{
@@ -426,7 +425,7 @@ body{
 .Inf_more{
     width: 100%;
     height: 30px;
-    color:#1C1D1D;
+    color:#323232;
     text-align: center;
     line-height: 30px;
     float: left;

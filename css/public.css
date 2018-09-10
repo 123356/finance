@@ -268,7 +268,7 @@ footer{
 }
 .ind_copyright{
     width: 100%;
-    background-color: black;
+    background-color: #323232;
     height: 116px;
     text-align: center;
     color:white;
@@ -290,11 +290,11 @@ footer{
 }
 .ind_footer_content li p:nth-child(1){
     font-size: 1.2em;
-    color: black;
+    color: #323232;
     margin-top: 30px;
 }
 .ind_footer_content li p{
-    color: #8D8F8F;
+    color: #969696;
     margin-top:20px;
 }
 a:hover{
