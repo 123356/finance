@@ -8,7 +8,7 @@ body{
     position: relative;
 }
 .com_container_left{
-    width: 75%;
+    width: 887px;
     float: left;
 }
 .com_container_up{
@@ -147,11 +147,11 @@ body{
     margin-top:10px;
 }
 .com_container_left_title p a{
-    color: #1B97F7;
+    color: #62a1f8;
 }
 .com_container_left_abstract{
     width: 80%;
-    height: 150px;
+    height: 165px;
     background-color: #eeeeee;
     padding: 10px;
     margin: 0 auto;
@@ -163,7 +163,7 @@ body{
     letter-spacing:1px;
     line-height:30px;
     padding:5px;
-    color:#222;
+    color:#323232;
 }
 .article{
     width: 80%;
@@ -174,11 +174,8 @@ body{
     margin-top: 10px;
     line-height: 32px;
     letter-spacing: 0.2px;
-    color:#222222;
-    font-size: 1em;
-    margin-bottom: 20px;
-
-
+    color:#323232;
+    font-size: 14px;
 }
 .article li:nth-child(4){
     width: 60%;
@@ -201,22 +198,27 @@ body{
     margin-bottom: 20px;
 }
 .com_topic_recommend_title{
-    width: 95%;
-    margin-left: 5%;
+    width: 100%;
+   padding-left: 28px;
     height: 56px;
     line-height: 56px;
     font-size: 20px;
 }
 .com_topic_recommend_down{
-    width:80%;
+    width:796px;
+    height: 200px;
+    display: block;
     margin: 0 auto;
 }
 .com_topic_recommend_down li{
-    width: 30%;
+    width: 226px;
     height: 100%;
     display: block;
     float: left;
-    margin-right: 3%;
+    margin-right: 58px;
+}
+.com_topic_recommend_down li:last-of-type{
+    margin-right: 0;
 }
 .com_topic_recommend_down li p:nth-child(1){
     height: 149px;
@@ -228,13 +230,11 @@ body{
 }
 .com_topic_recommend_down li p:nth-child(2){
     height: 35px;
-    width: 80%;
-    text-align: center;
+    width: 100%;
 }
 .com_cont_picture{
     width: 100%;
     height: 90px;
-    margin-top: 20px;
     background: url("../image/middle.jpg");
     background-size: 100% 100%;
 }
@@ -245,40 +245,52 @@ body{
     margin-top: 20px;
 }
 .com_comment_up{
-    width: 90%;
+    width: 100%;
     height: 320px;
-    padding: 10px 5%;
+    overflow: hidden;
 }
 .com_comment_up_title{
     width:100%;
     height: 40px;
+    padding-left: 26px;
     line-height: 40px;
     font-size: 1.5em;
-    color:black;
+    color:#323232;
+    margin-top: 28px;
 }
 .com_comment_up textarea{
-    width: 98%;
+    width: 835px;
     height: 200px;
     border-radius: 10px;
-    padding-left: 2%;
-    padding-top: 10px;
-    border: 1px solid #1B97F7;
-    color:#D9D9D9;
-    font-size: 1.2em;
+    padding-left: 15px;
+    border: 1px solid #62a1f8;
+    color:#323232;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+}
+.emotion{
+    display: block;
+    float: left;
+    margin-left: 26px;
+    margin-top: 10px;
 }
 .com_comment_up input{
-    width: 12%;
-    height: 47px;
-    line-height: 47px;
+    width:80px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
     color:white;
-    background-color: #1B97F7;
-    margin-left: 86%;
-    border-radius: 10px;
+    background-color: #62a1f8;
+    display: block;
+    border-radius: 5px;
+    float: right;
+    margin-right: 26px;
+    margin-top: 10px;
 }
 .com_comment ul{
-    width: 90%;
-    padding: 10px 5%;
+    width: 100%;
+    padding: 10px 26px;
 }
 .com_comment li{
     width: 100%;
@@ -288,7 +300,7 @@ body{
 .com_comment li:nth-child(1){
     height: 50px;
     line-height: 50px;
-    font-size: 1.5em;
+    font-size: 20px;
 }
 .com_comment li p:nth-child(1){
     width:60px;
@@ -321,12 +333,12 @@ body{
 }
 .com_comment li p:nth-child(2)>i:nth-child(1){
     margin-bottom: 16px;
-    color:#878787;
+    color:#62a1f8;
     margin-top: 10px;
 }
 .com_comment li p:nth-child(2)>i:nth-child(2){
     margin-bottom: 50px;
-    color:#858585;
+    color:#969696;
 }
 .com_comment li p:nth-child(2)>i:nth-child(3){
     color:#BCBCBC;
@@ -334,17 +346,17 @@ body{
 
 .com_comment li p:nth-child(3){
     float: right;
-    margin-right: 2%;
+    margin-right: 10px;
     color: #B8B8B8;
 }
 .com_comment li p:nth-child(3)>i{
     margin-top: 20px;
 }
 .com_comment li p em:nth-child(1){
-    margin-left: 5%;
+    margin-left: 25px;
 }
 .com_comment li p em{
-    margin-left: 2%;
+    margin-left: 10px;
 }
 .com_comment li p em>img{
     width: 16px;
@@ -353,7 +365,7 @@ body{
     display: inline-block;
 }
 .com_Left{
-    width: 130px;
+    width: 146px;
     height: 648px;
     display: block;
     position: absolute;
@@ -361,10 +373,10 @@ body{
     top: 0;
 }
 .com_Left li{
-    width: 90%;
-    padding: 5px 5%;
+    width: 130px;
+    padding: 5px 15px;
     height:200px;
-    margin-bottom: 1%;
+    margin-bottom: 19px;
     background-color: white;
 }
 .com_Left li p:nth-child(1){
